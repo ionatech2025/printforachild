@@ -37,19 +37,6 @@ export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState("100000")
   const [customAmount, setCustomAmount] = useState("")
   const [donationType, setDonationType] = useState("one-time")
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    setIsSubmitting(false)
-    setIsSubmitted(true)
-  }
 
   const getDisplayAmount = () => {
     if (selectedAmount === "custom") {
@@ -120,29 +107,7 @@ export default function DonatePage() {
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
-                      {isSubmitted ? (
-                        <div className="text-center py-12">
-                          <div className="w-20 h-20 rounded-full bg-primary/10 flex items-center justify-center mx-auto mb-6">
-                            <CheckCircle2 className="h-10 w-10 text-primary" />
-                          </div>
-                          <h3 className="text-2xl font-bold mb-4 text-foreground">Thank You for Your Generosity!</h3>
-                          <p className="text-muted-foreground mb-2">
-                            Your donation of <span className="font-semibold text-foreground">{getDisplayAmount()}</span> has been received.
-                          </p>
-                          <p className="text-muted-foreground mb-8">
-                            A confirmation email will be sent to you shortly with details about your donation and how it will be used.
-                          </p>
-                          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                            <Button onClick={() => setIsSubmitted(false)}>
-                              Make Another Donation
-                            </Button>
-                            <Button asChild variant="outline">
-                              <Link href="/our-work">See Our Impact</Link>
-                            </Button>
-                          </div>
-                        </div>
-                      ) : (
-                        <form onSubmit={handleSubmit} className="space-y-8">
+                      <div className="space-y-8">
                           {/* Donation Type */}
                           <div className="space-y-3">
                             <Label className="text-base font-semibold">Donation Type</Label>
@@ -234,7 +199,7 @@ export default function DonatePage() {
                             </div>
                           </div>
 
-                          {/* Summary & Submit */}
+                          {/* Summary & External Payment Links */}
                           <div className="bg-muted/50 rounded-lg p-6 space-y-4">
                             <div className="flex justify-between items-center">
                               <span className="font-medium text-foreground">Donation Amount:</span>
@@ -245,22 +210,38 @@ export default function DonatePage() {
                               <span className="text-foreground">{donationType === "monthly" ? "Monthly" : "One-time"}</span>
                             </div>
                             <hr />
-                            <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
-                              {isSubmitting ? (
-                                <>Processing...</>
-                              ) : (
-                                <>
-                                  Complete Donation
+                            <p className="text-sm text-muted-foreground text-center mb-2">
+                              Choose your preferred payment method:
+                            </p>
+                            <div className="grid gap-3">
+                              {/* PayPal Donate Button - Replace with actual PayPal.me link */}
+                              <Button asChild size="lg" className="w-full">
+                                <a 
+                                  href="https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_BUTTON_ID" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                >
+                                  Donate via PayPal
                                   <ArrowRight className="ml-2 h-4 w-4" />
-                                </>
-                              )}
-                            </Button>
+                                </a>
+                              </Button>
+                              {/* GoFundMe Link - Replace with actual campaign URL */}
+                              <Button asChild size="lg" variant="outline" className="w-full">
+                                <a 
+                                  href="https://www.gofundme.com/f/print-for-a-child-foundation" 
+                                  target="_blank" 
+                                  rel="noopener noreferrer"
+                                >
+                                  Donate via GoFundMe
+                                  <ArrowRight className="ml-2 h-4 w-4" />
+                                </a>
+                              </Button>
+                            </div>
                             <p className="text-xs text-center text-muted-foreground">
-                              By donating, you agree to our terms and privacy policy
+                              You will be redirected to a secure external payment page
                             </p>
                           </div>
-                        </form>
-                      )}
+                        </div>
                     </CardContent>
                   </Card>
                 </AnimateOnScroll>
