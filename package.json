@@ -1,7 +1,8 @@
 {
-  "name": "my-project",
+  "name": "print-for-a-child-foundation",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "bun@1.2.0",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

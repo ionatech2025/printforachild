@@ -2,7 +2,7 @@
 
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { MobileDonateCta } from "@/components/mobile-donate-cta"
+import { MobileDonateCTA } from "@/components/mobile-donate-cta"
 import { AnimateOnScroll } from "@/components/animate-on-scroll"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
@@ -346,7 +346,7 @@ export default function GetInvolvedPage() {
       </main>
 
       <Footer />
-      <MobileDonateCta />
+      <MobileDonateCTA />
     </div>
   )
 }
