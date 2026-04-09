@@ -2,9 +2,9 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
-import Image from 'next/image'
 import { Menu, X, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
+import { SiteLogo } from '@/components/site-logo'
 import { navLinks } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
@@ -33,15 +33,7 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <div className="relative h-[60px] w-[60px] shrink-0">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
-                alt="Print for a Child Foundation Logo"
-                fill
-                className="rounded-lg object-contain"
-                sizes="60px"
-              />
-            </div>
+            <SiteLogo className="size-11 sm:size-[60px]" />
             <span className={cn(
               "font-heading font-bold text-lg hidden sm:block transition-colors",
               isScrolled ? "text-foreground" : "text-foreground"

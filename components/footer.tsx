@@ -1,6 +1,6 @@
 import Link from 'next/link'
-import Image from 'next/image'
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { SiteLogo } from '@/components/site-logo'
 import { navLinks, contactInfo } from '@/lib/data'
 
 export function Footer() {
@@ -15,15 +15,7 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <div className="relative h-[60px] w-[60px] shrink-0">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
-                  alt="Print for a Child Foundation Logo"
-                  fill
-                  className="rounded-lg object-contain"
-                  sizes="60px"
-                />
-              </div>
+              <SiteLogo className="size-12 sm:size-[60px]" />
               <span className="font-heading font-bold text-xl text-background">
                 Print for a Child
               </span>
