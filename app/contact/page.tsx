@@ -17,17 +17,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: "Our Location",
-    details: ["Plot 123, Kampala Road", "Kampala, Uganda"],
+    details: ["Kampala, Uganda"],
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["+256 700 123 456", "+256 750 987 654"],
+    details: ["+256 746 808 777"],
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["info@printforachild.org", "donate@printforachild.org"],
+    details: ["printforachildfoundation@gmail.com"],
   },
   {
     icon: Clock,

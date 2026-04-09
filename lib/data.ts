@@ -182,12 +182,12 @@ export const navLinks = [
 
 // Contact information
 export const contactInfo = {
-  email: 'info@printforachild.org',
-  phone: '+256 700 000 000',
+  email: 'printforachildfoundation@gmail.com',
+  phone: '+256 746 808 777',
   address: 'Kampala, Uganda',
   social: {
-    facebook: 'https://facebook.com/printforachild',
-    twitter: 'https://twitter.com/printforachild',
+    facebook: 'https://facebook.com/PrintForAChildFoundation',
+    twitter: 'https://twitter.com/Print4aChild',
     instagram: 'https://instagram.com/printforachild',
     linkedin: 'https://linkedin.com/company/printforachild',
   },

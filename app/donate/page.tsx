@@ -304,8 +304,7 @@ export default function DonatePage() {
                         <div>
                           <h4 className="font-semibold text-foreground">Mobile Money</h4>
                           <p className="text-muted-foreground">
-                            MTN: 0776 123 456<br />
-                            Airtel: 0750 123 456
+                            MTN/Airtel: 0746 808 777
                           </p>
                         </div>
                         <div>

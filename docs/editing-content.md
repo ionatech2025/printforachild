@@ -101,8 +101,8 @@ Update contact details in `lib/data.ts`:
 
 ```typescript
 export const contactInfo = {
-  email: 'info@printforachild.org',
-  phone: '+256 700 000 000',
+  email: 'printforachildfoundation@gmail.com',
+  phone: '+256 746 808 777',
   address: 'Kampala, Uganda',
 }
 ```

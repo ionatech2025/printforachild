@@ -47,7 +47,7 @@ export default function AboutPage() {
                     alt="Young children reading books together at St. Mary's Junior School"
                     width={600}
                     height={450}
-                    className="rounded-2xl shadow-2xl"
+                    className="rounded-2xl shadow-2xl w-auto h-auto"
                   />
                   <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10" />
                 </div>

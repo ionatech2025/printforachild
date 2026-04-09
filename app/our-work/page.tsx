@@ -206,7 +206,7 @@ export default function OurWorkPage() {
                     alt="Students reading Primary English textbooks"
                     width={600}
                     height={450}
-                    className="rounded-2xl shadow-2xl"
+                    className="rounded-2xl shadow-2xl w-auto h-auto"
                   />
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-primary rounded-2xl -z-10" />
                 </div>
