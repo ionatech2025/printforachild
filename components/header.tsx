@@ -38,7 +38,7 @@ export function Header() {
               alt="Print for a Child Foundation Logo"
               width={60}
               height={60}
-              className="rounded-lg"
+              className="rounded-lg w-auto h-auto"
             />
             <span className={cn(
               "font-heading font-bold text-lg hidden sm:block transition-colors",
