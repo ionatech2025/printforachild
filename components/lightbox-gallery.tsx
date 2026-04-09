@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import { X, ChevronLeft, ChevronRight } from 'lucide-react'
 import { cn } from '@/lib/utils'
@@ -19,14 +19,20 @@ interface LightboxGalleryProps {
 export function LightboxGallery({ images, columns = 3 }: LightboxGalleryProps) {
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null)
 
+  useEffect(() => {
+    document.body.style.overflow = selectedIndex === null ? 'auto' : 'hidden'
+
+    return () => {
+      document.body.style.overflow = 'auto'
+    }
+  }, [selectedIndex])
+
   const openLightbox = (index: number) => {
     setSelectedIndex(index)
-    document.body.style.overflow = 'hidden'
   }
 
   const closeLightbox = () => {
     setSelectedIndex(null)
-    document.body.style.overflow = 'auto'
   }
 
   const goToPrevious = () => {
@@ -125,7 +131,7 @@ export function LightboxGallery({ images, columns = 3 }: LightboxGalleryProps) {
 
           {/* Image */}
           <div
-            className="relative max-w-5xl max-h-[85vh] mx-4"
+            className="relative mx-4 flex max-h-[85vh] max-w-[calc(100vw-2rem)] items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
             <Image
@@ -133,7 +139,8 @@ export function LightboxGallery({ images, columns = 3 }: LightboxGalleryProps) {
               alt={images[selectedIndex].alt}
               width={1200}
               height={800}
-              className="object-contain max-h-[85vh] w-auto h-auto rounded-lg"
+              className="max-h-[85vh] h-auto max-w-full w-auto rounded-lg object-contain"
+              sizes="100vw"
               priority
             />
             {images[selectedIndex].caption && (

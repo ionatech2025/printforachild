@@ -97,13 +97,19 @@ export const galleryImages = [
 
 ## Contact Information
 
-Update contact details in `lib/data.ts`:
+Update contact details in `lib/data.ts`. The footer, donate page, and contact page all read from this object:
 
 ```typescript
 export const contactInfo = {
   email: 'printforachildfoundation@gmail.com',
   phone: '+256 746 808 777',
   address: 'Kampala, Uganda',
+  social: {
+    facebook: 'https://facebook.com/PrintForAChildFoundation',
+    twitter: 'https://twitter.com/Print4aChild',
+    instagram: 'https://instagram.com/printforachild',
+    linkedin: 'https://linkedin.com/company/printforachild',
+  },
 }
 ```
 

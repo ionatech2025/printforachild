@@ -12,22 +12,29 @@ import { Textarea } from "@/components/ui/textarea"
 import { Label } from "@/components/ui/label"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from "lucide-react"
+import { contactInfo as sharedContactInfo } from "@/lib/data"
 
-const contactInfo = [
+const mapHref = `https://maps.google.com/?q=${encodeURIComponent(sharedContactInfo.address)}`
+const dialablePhone = sharedContactInfo.phone.replace(/\s+/g, "")
+
+const contactCards = [
   {
     icon: MapPin,
     title: "Our Location",
-    details: ["Kampala, Uganda"],
+    details: [sharedContactInfo.address],
+    href: mapHref,
   },
   {
     icon: Phone,
     title: "Phone",
-    details: ["+256 746 808 777"],
+    details: [sharedContactInfo.phone],
+    href: `tel:${dialablePhone}`,
   },
   {
     icon: Mail,
     title: "Email",
-    details: ["printforachildfoundation@gmail.com"],
+    details: [sharedContactInfo.email],
+    href: `mailto:${sharedContactInfo.email}`,
   },
   {
     icon: Clock,
@@ -200,7 +207,7 @@ export default function ContactPage() {
                   <h2 className="text-2xl font-bold text-foreground mb-6">Contact Information</h2>
                 </AnimateOnScroll>
                 
-                {contactInfo.map((info, index) => (
+                {contactCards.map((info, index) => (
                   <AnimateOnScroll key={index}>
                     <Card>
                       <CardContent className="flex items-start gap-4 p-6">
@@ -209,9 +216,23 @@ export default function ContactPage() {
                         </div>
                         <div>
                           <h3 className="font-semibold text-foreground mb-1">{info.title}</h3>
-                          {info.details.map((detail, idx) => (
-                            <p key={idx} className="text-sm text-muted-foreground">{detail}</p>
-                          ))}
+                          {info.href ? (
+                            info.details.map((detail, idx) => (
+                              <a
+                                key={idx}
+                                href={info.href}
+                                target={info.title === "Our Location" ? "_blank" : undefined}
+                                rel={info.title === "Our Location" ? "noopener noreferrer" : undefined}
+                                className="block text-sm text-muted-foreground transition-colors hover:text-primary"
+                              >
+                                {detail}
+                              </a>
+                            ))
+                          ) : (
+                            info.details.map((detail, idx) => (
+                              <p key={idx} className="text-sm text-muted-foreground">{detail}</p>
+                            ))
+                          )}
                         </div>
                       </CardContent>
                     </Card>
@@ -252,10 +273,10 @@ export default function ContactPage() {
                   <div className="text-center">
                     <MapPin className="h-12 w-12 text-primary mx-auto mb-4" />
                     <p className="text-lg font-semibold text-foreground">Print for a Child Foundation</p>
-                    <p className="text-muted-foreground">Plot 123, Kampala Road, Kampala, Uganda</p>
+                    <p className="text-muted-foreground">{sharedContactInfo.address}</p>
                     <Button asChild variant="outline" className="mt-4">
                       <a 
-                        href="https://maps.google.com/?q=Kampala,Uganda" 
+                        href={mapHref} 
                         target="_blank" 
                         rel="noopener noreferrer"
                       >

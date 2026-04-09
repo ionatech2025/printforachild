@@ -33,13 +33,15 @@ export function Header() {
         <nav className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 shrink-0">
-            <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
-              alt="Print for a Child Foundation Logo"
-              width={60}
-              height={60}
-              className="rounded-lg w-auto h-auto"
-            />
+            <div className="relative h-[60px] w-[60px] shrink-0">
+              <Image
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
+                alt="Print for a Child Foundation Logo"
+                fill
+                className="rounded-lg object-contain"
+                sizes="60px"
+              />
+            </div>
             <span className={cn(
               "font-heading font-bold text-lg hidden sm:block transition-colors",
               isScrolled ? "text-foreground" : "text-foreground"

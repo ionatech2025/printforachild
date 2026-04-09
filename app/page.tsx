@@ -198,7 +198,8 @@ export default function HomePage() {
                     alt="Two happy children showing their storybooks"
                     width={600}
                     height={450}
-                    className="rounded-2xl shadow-2xl w-auto h-auto"
+                    className="h-auto w-full rounded-2xl shadow-2xl"
+                    sizes="(max-width: 1024px) 100vw, 50vw"
                   />
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-2xl -z-10" />
                 </div>

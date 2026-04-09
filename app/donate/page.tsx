@@ -12,6 +12,7 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Heart, BookOpen, Users, Building2, Gift, Shield, CheckCircle2, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { contactInfo } from "@/lib/data"
 
 const donationAmounts = [
   { value: "25000", label: "UGX 25,000", impact: "2 storybooks for a child" },
@@ -37,6 +38,7 @@ export default function DonatePage() {
   const [selectedAmount, setSelectedAmount] = useState("100000")
   const [customAmount, setCustomAmount] = useState("")
   const [donationType, setDonationType] = useState("one-time")
+  const dialablePhone = contactInfo.phone.replace(/\s+/g, "")
 
   const getDisplayAmount = () => {
     if (selectedAmount === "custom") {
@@ -304,7 +306,10 @@ export default function DonatePage() {
                         <div>
                           <h4 className="font-semibold text-foreground">Mobile Money</h4>
                           <p className="text-muted-foreground">
-                            MTN/Airtel: 0746 808 777
+                            MTN/Airtel:{" "}
+                            <a href={`tel:${dialablePhone}`} className="text-primary hover:underline">
+                              {contactInfo.phone}
+                            </a>
                           </p>
                         </div>
                         <div>

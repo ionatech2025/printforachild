@@ -5,6 +5,7 @@ import { navLinks, contactInfo } from '@/lib/data'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
+  const dialablePhone = contactInfo.phone.replace(/\s+/g, '')
 
   return (
     <footer className="bg-foreground text-background">
@@ -14,13 +15,15 @@ export function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
-                alt="Print for a Child Foundation Logo"
-                width={60}
-                height={60}
-                className="rounded-lg w-auto h-auto"
-              />
+              <div className="relative h-[60px] w-[60px] shrink-0">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/PRINT%20FOR%20A%20CHILD-RgkYN0VfsnioTVBuHYMiY9lApppAeI.jpg"
+                  alt="Print for a Child Foundation Logo"
+                  fill
+                  className="rounded-lg object-contain"
+                  sizes="60px"
+                />
+              </div>
               <span className="font-heading font-bold text-xl text-background">
                 Print for a Child
               </span>
@@ -100,7 +103,7 @@ export function Footer() {
               </li>
               <li>
                 <a
-                  href={`tel:${contactInfo.phone}`}
+                  href={`tel:${dialablePhone}`}
                   className="flex items-center gap-3 text-background/80 hover:text-background transition-colors"
                 >
                   <Phone className="w-5 h-5 shrink-0" />
