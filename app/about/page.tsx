@@ -1,14 +1,15 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Heart, Target, Eye, Users, ArrowRight, Quote } from 'lucide-react'
+import { Heart, Target, Eye, Users, ArrowRight, Quote, Globe, TrendingDown } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { MobileDonateCTA } from '@/components/mobile-donate-cta'
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
-import { teamMembers, testimonials } from '@/lib/data'
+import { StatCounter } from '@/components/stat-counter'
+import { teamMembers, testimonials, founderProfile, missionVision } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'About Us',
@@ -29,22 +30,22 @@ export default function AboutPage() {
                   About Print for a Child
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  We are a Ugandan non-profit organization dedicated to transforming lives through the power of education. Since our founding, we have been committed to ensuring that every child has access to quality educational materials.
+                  Founded in 2020 and officially registered in 2025, Print for a Child Foundation is a Ugandan non-profit dedicated to transforming lives through the power of education. We have impacted the lives of over 320 children across the country and continue to grow our reach every day.
                 </p>
               </div>
             </AnimateOnScroll>
           </div>
         </section>
 
-        {/* Story Section */}
+        {/* Founder Story Section */}
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <AnimateOnScroll>
                 <div className="relative">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111853-INGlVNWVcVtqFcudC7otvi0wkM1mqS.jpg"
-                    alt="Young children reading books together at St. Mary's Junior School"
+                    src={founderProfile.image}
+                    alt={`${founderProfile.name}, Co-Founder of Print for a Child Foundation`}
                     width={600}
                     height={450}
                     className="h-auto w-full rounded-2xl shadow-2xl"
@@ -53,27 +54,105 @@ export default function AboutPage() {
                   <div className="absolute -bottom-6 -left-6 w-32 h-32 bg-accent rounded-2xl -z-10" />
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <div>
-                  <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Story</span>
+                  <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Our Founder&apos;s Story</span>
                   <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-6 text-foreground">
-                    How It All Began
+                    From Personal Experience to a Mission
                   </h2>
                   <div className="space-y-4 text-muted-foreground leading-relaxed">
                     <p>
-                      Print for a Child Foundation was born from a simple observation: thousands of children across Uganda were attending school without basic educational materials. Many students shared a single textbook among five or more classmates, severely limiting their ability to learn effectively.
+                      Born and raised in Uganda, <strong className="text-foreground">{founderProfile.name}</strong> witnessed firsthand the severe lack of educational resources in rural schools — having personally been a victim of the same challenges during his early years in school. Many students shared a single textbook among five or more classmates, severely limiting their ability to learn.
                     </p>
                     <p>
-                      Witnessing this challenge, our founders decided to take action. Starting with a small printing initiative in Kampala, we began producing and distributing curriculum-aligned textbooks to schools in underserved communities.
+                      This experience fueled his commitment to change the narrative. In 2020, Paul started Print for a Child Foundation with the mission of bridging the educational gap through the provision of textbooks, storybooks, writing materials, and printed educational content to underserved areas.
                     </p>
                     <p>
-                      Today, we have grown into a trusted organization that has touched the lives of thousands of children, working hand-in-hand with schools, communities, and partners to create lasting educational impact across Uganda.
+                      Today, the foundation has impacted the lives of over 320 children across the country, working hand-in-hand with schools, communities, and partners to create lasting educational impact across Uganda. The team of vibrant and energetic people continues to grow, driven by the belief that every child deserves a decent future through education.
                     </p>
                   </div>
                 </div>
               </AnimateOnScroll>
             </div>
+          </div>
+        </section>
+
+        {/* Why We Exist - Education Crisis */}
+        <section className="py-20 bg-muted">
+          <div className="container mx-auto px-4">
+            <AnimateOnScroll>
+              <div className="text-center mb-12">
+                <span className="text-secondary font-semibold text-sm uppercase tracking-wider">Why We Exist</span>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mt-2 mb-4 text-foreground">
+                  Uganda&apos;s Education Crisis
+                </h2>
+                <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+                  Uganda has the highest school dropout rate in East Africa. The statistics paint a grim picture that drives our urgency to act.
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <AnimateOnScroll delay={0}>
+                <Card className="h-full border-0 shadow-lg text-center">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                      <TrendingDown className="w-8 h-8 text-accent" />
+                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                      <StatCounter end={43} suffix="%" />
+                    </div>
+                    <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">Drop Out Before P7</h3>
+                    <p className="text-muted-foreground text-sm">
+                      43% of pupils who enroll in Primary 1 drop out of school before reaching Primary 7, according to UNEB data.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={100}>
+                <Card className="h-full border-0 shadow-lg text-center">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-accent/20 flex items-center justify-center mx-auto mb-4">
+                      <TrendingDown className="w-8 h-8 text-accent" />
+                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                      94.4%
+                    </div>
+                    <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">Never Reach UACE</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Of 1,837,227 pupils who joined P1 in 2004, only 102,858 sat for UACE in 2016 — a staggering 94.4% dropout rate.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={200}>
+                <Card className="h-full border-0 shadow-lg text-center">
+                  <CardContent className="p-8">
+                    <div className="w-16 h-16 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
+                      <Globe className="w-8 h-8 text-secondary" />
+                    </div>
+                    <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">
+                      #1
+                    </div>
+                    <h3 className="font-heading font-semibold text-lg mb-2 text-foreground">Highest in East Africa</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Uganda has the highest school dropout rate in East Africa, with rates significantly higher for females, per UNESCO reports.
+                    </p>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
+            </div>
+
+            <AnimateOnScroll delay={300}>
+              <div className="max-w-3xl mx-auto mt-12 text-center">
+                <p className="text-muted-foreground leading-relaxed">
+                  The high dropout rates are driven by hidden costs — exercise books, pens, uniforms, and other scholastic materials that families living on less than a dollar a day simply cannot afford. As a result, many children end up trapped in a vicious cycle of poverty. <strong className="text-foreground">That&apos;s why we exist.</strong>
+                </p>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
@@ -91,12 +170,12 @@ export default function AboutPage() {
                   <div>
                     <h2 className="font-heading text-2xl font-bold mb-4">Our Mission</h2>
                     <p className="text-primary-foreground/90 leading-relaxed">
-                      To print and distribute quality study materials to less privileged school children in Uganda, ensuring that every child has access to the educational resources they need to succeed and break the cycle of poverty through education.
+                      {missionVision.mission}
                     </p>
                   </div>
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <div className="flex gap-4">
                   <div className="shrink-0">
@@ -107,12 +186,29 @@ export default function AboutPage() {
                   <div>
                     <h2 className="font-heading text-2xl font-bold mb-4">Our Vision</h2>
                     <p className="text-primary-foreground/90 leading-relaxed">
-                      A Uganda where every child, regardless of their economic background, has equal access to quality educational materials and the opportunity to achieve their full potential through learning.
+                      {missionVision.vision}
                     </p>
                   </div>
                 </div>
               </AnimateOnScroll>
             </div>
+
+            {/* SDG 4 Alignment */}
+            <AnimateOnScroll delay={300}>
+              <div className="mt-12 pt-12 border-t border-primary-foreground/20">
+                <div className="flex flex-col md:flex-row items-center gap-6 justify-center text-center md:text-left">
+                  <div className="w-16 h-16 rounded-xl bg-primary-foreground/10 flex items-center justify-center shrink-0">
+                    <Globe className="w-8 h-8" />
+                  </div>
+                  <div className="max-w-2xl">
+                    <h3 className="font-heading text-xl font-bold mb-2">Aligned with UN Sustainable Development Goal 4</h3>
+                    <p className="text-primary-foreground/80 leading-relaxed">
+                      Our work directly supports SDG 4: Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all. We are committed to reducing educational inequality through practical, on-the-ground interventions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </AnimateOnScroll>
           </div>
         </section>
 
@@ -190,7 +286,7 @@ export default function AboutPage() {
               </div>
             </AnimateOnScroll>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {teamMembers.map((member, index) => (
                 <AnimateOnScroll key={member.name} delay={index * 100}>
                   <Card className="h-full border-0 shadow-lg overflow-hidden">

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import { Heart, BookOpen, School, Users, GraduationCap, ArrowRight, Quote } from 'lucide-react'
+import { Heart, BookOpen, School, Users, GraduationCap, ArrowRight, Quote, TrendingDown, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Header } from '@/components/header'
@@ -8,7 +8,7 @@ import { Footer } from '@/components/footer'
 import { MobileDonateCTA } from '@/components/mobile-donate-cta'
 import { StatCounter } from '@/components/stat-counter'
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
-import { impactStats, programs, testimonials, blogPosts } from '@/lib/data'
+import { impactStats, programs, testimonials, blogPosts, missionVision } from '@/lib/data'
 
 const programIcons = {
   book: BookOpen,
@@ -92,8 +92,79 @@ export default function HomePage() {
                   Our Mission
                 </h2>
                 <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                  To print and distribute quality study materials to less privileged school children in Uganda, ensuring every child has access to the educational resources they need to succeed. We believe that education is the most powerful tool for breaking the cycle of poverty.
+                  {missionVision.mission}
                 </p>
+              </div>
+            </AnimateOnScroll>
+          </div>
+        </section>
+
+        {/* Education Crisis Section */}
+        <section className="py-20 bg-foreground text-background">
+          <div className="container mx-auto px-4">
+            <AnimateOnScroll>
+              <div className="text-center mb-12">
+                <span className="inline-block px-4 py-2 rounded-full bg-accent/20 text-accent font-medium text-sm mb-4">
+                  The Challenge
+                </span>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">
+                  Why This Matters
+                </h2>
+                <p className="text-background/80 text-lg max-w-2xl mx-auto">
+                  Uganda faces one of Africa&apos;s most severe education crises. Without intervention, millions of children will never complete school.
+                </p>
+              </div>
+            </AnimateOnScroll>
+
+            <div className="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              <AnimateOnScroll delay={0}>
+                <div className="text-center p-6">
+                  <TrendingDown className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    <StatCounter end={43} suffix="%" />
+                  </div>
+                  <p className="text-background/80 text-sm">
+                    of pupils drop out before reaching Primary 7
+                  </p>
+                </div>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={100}>
+                <div className="text-center p-6">
+                  <TrendingDown className="w-10 h-10 text-accent mx-auto mb-4" />
+                  <div className="text-4xl md:text-5xl font-bold text-accent mb-2">
+                    94.4%
+                  </div>
+                  <p className="text-background/80 text-sm">
+                    dropout rate from Primary 1 to Advanced Level exams
+                  </p>
+                </div>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={200}>
+                <div className="text-center p-6">
+                  <Globe className="w-10 h-10 text-secondary mx-auto mb-4" />
+                  <div className="text-4xl md:text-5xl font-bold text-secondary mb-2">
+                    #1
+                  </div>
+                  <p className="text-background/80 text-sm">
+                    highest school dropout rate in East Africa (UNESCO)
+                  </p>
+                </div>
+              </AnimateOnScroll>
+            </div>
+
+            <AnimateOnScroll delay={300}>
+              <div className="text-center mt-10">
+                <p className="text-background/70 max-w-2xl mx-auto mb-6">
+                  The main driver? Hidden costs like textbooks, exercise books, and pens that families living on less than a dollar a day cannot afford.
+                </p>
+                <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
+                  <Link href="/about" className="flex items-center gap-2">
+                    Learn More About Our Work
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </Button>
               </div>
             </AnimateOnScroll>
           </div>
@@ -211,10 +282,10 @@ export default function HomePage() {
                     The Joy of Learning
                   </h2>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-6">
-                    When a child holds their own book for the first time, you can see the excitement in their eyes. Books open doors to imagination, knowledge, and endless possibilities.
+                    When a child holds their own book for the first time, you can see the excitement in their eyes. Our materials are aligned with Uganda&apos;s new competency-based curriculum, equipping students with 21st-century skills like critical thinking and collaboration.
                   </p>
                   <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-                    Your support helps us bring this joy to thousands of children across Uganda who would otherwise never own a book of their own.
+                    Since 2020, we have been printing and distributing textbooks, revision guides, and learning materials to children across rural Uganda who would otherwise never own a book of their own.
                   </p>
                   <Button asChild className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
                     <Link href="/our-work" className="flex items-center gap-2">

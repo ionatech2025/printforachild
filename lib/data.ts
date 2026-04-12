@@ -8,6 +8,41 @@ export const impactStats = {
   volunteersJoined: 120,
 }
 
+// Uganda Education Crisis Statistics (sourced from UNESCO & UNEB reports)
+export const educationCrisisStats = {
+  dropoutBeforeP7: 43,          // % of pupils who drop out before P7
+  dropoutBeforeUACE: 94.4,      // % who never sit UACE
+  pupilsEnrolled2004: 1837227,  // pupils who joined P1 in 2004
+  satUACE2016: 102858,          // who actually sat UACE in 2016
+  populationGrowthRate: 3.3,    // % annual growth
+  highestDropoutInRegion: 'East Africa',
+}
+
+// Organization timeline
+export const organizationInfo = {
+  foundedYear: 2020,
+  registeredYear: 2025,
+  directChildrenImpacted: 320,
+  targetMaterials: 50000,
+  targetSchools: 50,
+}
+
+// Founder profile
+export const founderProfile = {
+  name: 'Lwanawetaase Paul',
+  role: 'Co-Founder & Director',
+  age: 30,
+  location: 'Kampala, Uganda',
+  bio: 'Born and raised in Uganda, Paul witnessed firsthand the severe lack of educational resources in rural schools — having personally experienced these challenges during his own early years in school. This experience fueled his lifelong commitment to change the narrative for Ugandan children. In 2020, he started Print for a Child Foundation with the mission of bridging the educational gap through the provision of textbooks, storybooks, writing materials, and printed educational content to underserved areas.',
+  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
+}
+
+// Mission and Vision (from official grant proposal)
+export const missionVision = {
+  mission: 'To promote inclusive and equitable quality education by distributing free printed learning materials to underprivileged children in Uganda, ensuring every child has access to the educational resources they need to succeed and break the cycle of poverty through education.',
+  vision: 'A Uganda where every child, regardless of background, has access to the educational tools they need to succeed.',
+}
+
 // Partners - Add or remove partners here
 export const partners = [
   { name: 'NCDC Uganda', logo: '/partners/ncdc.png' },
@@ -19,10 +54,16 @@ export const partners = [
 // Team members
 export const teamMembers = [
   {
+    name: 'Lwanawetaase Paul',
+    role: 'Co-Founder & Director',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
+    bio: 'Born and raised in Uganda, Paul experienced the lack of educational resources firsthand during his early school years. This drove him to found Print for a Child in 2020, dedicating his life to ensuring every child has access to essential learning materials.',
+  },
+  {
     name: 'Foundation Team',
     role: 'Dedicated Volunteers',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
-    bio: 'Our passionate team works tirelessly to ensure every child has access to quality educational materials.',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
+    bio: 'Our vibrant and energetic team of volunteers works tirelessly across Uganda to print, distribute, and deliver educational materials to children in underserved communities.',
   },
 ]
 
@@ -149,22 +190,22 @@ export const blogPosts = [
 export const programs = [
   {
     title: 'Book Printing Program',
-    description: 'We print high-quality textbooks and study materials aligned with the Ugandan curriculum for primary and secondary schools.',
+    description: 'We print high-quality textbooks, revision guides, and study materials aligned with Uganda\'s new competency-based curriculum for primary and secondary schools.',
     icon: 'book',
   },
   {
     title: 'School Partnerships',
-    description: 'We partner with schools across Uganda to identify needs and ensure materials reach the children who need them most.',
+    description: 'We partner with schools in underserved and rural areas across Uganda to identify needs and ensure materials reach the children who need them most.',
     icon: 'school',
   },
   {
     title: 'Community Reading Events',
-    description: 'We organize reading events and literacy workshops to foster a love for learning in communities.',
+    description: 'We organize reading events and literacy workshops to foster a love for learning and build a reading culture in communities.',
     icon: 'users',
   },
   {
-    title: 'Teacher Training',
-    description: 'We support teachers with resources and training to maximize the impact of educational materials.',
+    title: 'Scholastic Support',
+    description: 'Beyond textbooks, we provide exercise books, pens, clothing, and other essential scholastic materials to keep children in school.',
     icon: 'graduation',
   },
 ]

@@ -100,8 +100,8 @@ export default function GetInvolvedPage() {
                 Join Our Mission
               </h1>
               <p className="text-xl md:text-2xl opacity-90">
-                There are many ways to support Print for a Child Foundation. 
-                Whether you volunteer your time, partner with us, or make a donation, 
+                With 43% of Ugandan pupils dropping out before Primary 7 and a 94.4% dropout rate before Advanced Level,
+                the need has never been greater. Whether you volunteer your time, partner with us, or make a donation,
                 your contribution changes lives.
               </p>
             </div>
@@ -310,22 +310,25 @@ export default function GetInvolvedPage() {
                     In-Kind Donations
                   </h2>
                   <p className="text-lg text-muted-foreground mb-6">
-                    We also accept book donations! If you have gently used children&apos;s books 
-                    or educational materials, we&apos;d love to give them a new life in the hands 
-                    of eager young readers.
+                    We also accept in-kind donations! Beyond books, we provide a wide range of scholastic
+                    materials to help keep children in school and support their learning journey.
                   </p>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                      <span className="text-muted-foreground">Children&apos;s storybooks and picture books</span>
+                      <span className="text-muted-foreground">Textbooks, storybooks, and picture books</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                      <span className="text-muted-foreground">Educational textbooks and workbooks</span>
+                      <span className="text-muted-foreground">Exercise books, pens, and stationery</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
-                      <span className="text-muted-foreground">School supplies and stationery</span>
+                      <span className="text-muted-foreground">School uniforms and clothing</span>
+                    </li>
+                    <li className="flex items-start gap-3">
+                      <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />
+                      <span className="text-muted-foreground">Shoes and footwear for students</span>
                     </li>
                     <li className="flex items-start gap-3">
                       <CheckCircle2 className="h-5 w-5 text-primary mt-0.5" />

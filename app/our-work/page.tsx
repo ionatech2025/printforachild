@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Heart, Printer, Truck, School, BookOpen, CheckCircle, ArrowRight } from 'lucide-react'
+import { Heart, Printer, Truck, School, BookOpen, CheckCircle, ArrowRight, Globe } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Card, CardContent } from '@/components/ui/card'
 import { Header } from '@/components/header'
@@ -25,7 +25,7 @@ const processSteps = [
   {
     icon: BookOpen,
     title: 'Curriculum Alignment',
-    description: 'Working with NCDC Uganda, we ensure all materials align with the national curriculum standards.',
+    description: 'Working with NCDC Uganda, we ensure all materials align with Uganda\'s new competency-based curriculum, focusing on critical thinking, collaboration, and practical application of knowledge.',
   },
   {
     icon: Printer,
@@ -170,7 +170,7 @@ export default function OurWorkPage() {
                     Primary English Textbook Project
                   </h2>
                   <p className="text-muted-foreground leading-relaxed mb-6">
-                    In partnership with NCDC Uganda, we launched a comprehensive initiative to provide Primary English textbooks to schools in rural areas. This project has transformed the learning experience for thousands of students who previously had no access to proper reading materials.
+                    In partnership with NCDC Uganda, we launched a comprehensive initiative to provide Primary English textbooks to schools in rural areas. Aligned with Uganda&apos;s new competency-based curriculum, these materials equip students with 21st-century skills and support learner-centered education — transforming the learning experience for students who previously had no access to proper reading materials.
                   </p>
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-center gap-3 text-muted-foreground">
@@ -324,6 +324,63 @@ export default function OurWorkPage() {
                   </div>
                 </AnimateOnScroll>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* SDG 4 & Curriculum Section */}
+        <section className="py-20">
+          <div className="container mx-auto px-4">
+            <div className="grid md:grid-cols-2 gap-12 max-w-5xl mx-auto items-center">
+              <AnimateOnScroll>
+                <div>
+                  <div className="flex items-center gap-3 mb-4">
+                    <div className="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center">
+                      <Globe className="w-6 h-6 text-secondary" />
+                    </div>
+                    <span className="text-secondary font-semibold text-sm uppercase tracking-wider">SDG 4 Aligned</span>
+                  </div>
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-foreground">
+                    Supporting National &amp; Global Education Goals
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    Our work directly supports <strong className="text-foreground">UN Sustainable Development Goal 4</strong>: Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    We align our materials with Uganda&apos;s new competency-based curriculum, which focuses on equipping students with critical thinking, collaboration, and practical skills — creating self-assured individuals, responsible citizens, and lifelong learners.
+                  </p>
+                </div>
+              </AnimateOnScroll>
+
+              <AnimateOnScroll delay={200}>
+                <Card className="border-0 shadow-lg">
+                  <CardContent className="p-8">
+                    <h3 className="font-heading font-bold text-xl mb-6 text-foreground">Our Target Goals</h3>
+                    <ul className="space-y-4">
+                      <li className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span>Print and distribute <strong className="text-foreground">50,000 sets</strong> of learning materials</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span>Reach at least <strong className="text-foreground">50 schools</strong> across rural Uganda</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span>Improve learning outcomes in <strong className="text-foreground">literacy and numeracy</strong></span>
+                      </li>
+                      <li className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span>Increase <strong className="text-foreground">student retention</strong> and reduce dropout rates</span>
+                      </li>
+                      <li className="flex items-start gap-3 text-muted-foreground">
+                        <CheckCircle className="w-5 h-5 text-secondary shrink-0 mt-0.5" />
+                        <span>Foster a <strong className="text-foreground">reading culture</strong> in communities</span>
+                      </li>
+                    </ul>
+                  </CardContent>
+                </Card>
+              </AnimateOnScroll>
             </div>
           </div>
         </section>

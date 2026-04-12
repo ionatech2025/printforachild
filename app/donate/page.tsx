@@ -72,8 +72,8 @@ export default function DonatePage() {
                 Give the Gift of Literacy
               </h1>
               <p className="text-xl md:text-2xl opacity-90">
-                Your donation helps us print and distribute books to children who need them most. 
-                Every book opens a door to a brighter future.
+                In Uganda, 43% of children drop out before Primary 7 — largely because families cannot afford basic scholastic materials.
+                Your donation helps us print and distribute books to children who need them most.
               </p>
             </div>
           </div>
@@ -356,8 +356,8 @@ export default function DonatePage() {
                   Why Your Donation Matters
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  In Uganda, many children lack access to books and educational materials. 
-                  Your support helps us bridge this gap.
+                  Uganda has the highest school dropout rate in East Africa. Many parents live on less than a dollar a day and cannot afford basic scholastic materials.
+                  Your support directly helps us break this cycle.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -366,17 +366,17 @@ export default function DonatePage() {
               {[
                 {
                   title: "Immediate Impact",
-                  description: "Your donation directly funds the printing and distribution of books to schools within weeks.",
+                  description: "Your donation directly funds curriculum-aligned textbooks, exercise books, and learning materials distributed to schools within weeks.",
                   icon: BookOpen,
                 },
                 {
-                  title: "Long-term Change",
-                  description: "Literacy opens doors to education, employment, and breaking the cycle of poverty.",
+                  title: "Reduce Dropout Rates",
+                  description: "By providing essential scholastic materials, we help keep children in school — tackling the hidden costs that drive Uganda's 43% dropout rate.",
                   icon: Users,
                 },
                 {
-                  title: "Community Growth",
-                  description: "When children read, entire communities benefit through improved education outcomes.",
+                  title: "Build a Reading Culture",
+                  description: "Every book fosters lifelong learning. We support Uganda's national education goals and UN SDG 4 for inclusive, quality education.",
                   icon: Building2,
                 },
               ].map((item, index) => (
