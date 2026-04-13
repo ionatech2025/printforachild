@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git remote:*)",
+      "Bash(git push:*)",
+      "Bash(gh auth:*)",
+      "Bash(gh repo:*)",
+      "Bash(python3 -c \"import docx; print\\('python-docx available'\\)\")",
+      "Bash(python3:*)",
+      "Bash(npx next:*)",
+      "Bash(curl -s -o /dev/null -w \"%{http_code}\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/about)",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/our-work)",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/get-involved)",
+      "Bash(curl -s -o /dev/null -w \" %{http_code}\" http://localhost:3000/donate)",
+      "Bash(curl -s http://localhost:3000/)",
+      "Bash(curl:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(vercel --version)",
+      "Bash(vercel deploy:*)"
+    ]
+  }
+}
