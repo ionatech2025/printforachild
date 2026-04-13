@@ -18,12 +18,16 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(vercel --version)",
+<<<<<<< HEAD
       "Bash(vercel deploy:*)",
       "Bash(npx tsc:*)",
       "Bash(git config:*)",
       "Bash(umask 077)",
       "Bash(printf 'https://ionatech2025:SAEPTLL%%40iona2060@github.com\\\\n')",
       "Bash(chmod 600 .git/credentials)"
+=======
+      "Bash(vercel deploy:*)"
+>>>>>>> be0b33040db3c76262ab2d4d0153375172621d2c
     ]
   }
 }
