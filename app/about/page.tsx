@@ -30,7 +30,7 @@ export default function AboutPage() {
                   About Print for a Child
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
-                  Founded in 2020 and officially registered in 2025, Print for a Child Foundation is a Ugandan non-profit dedicated to transforming lives through the power of education. We have impacted the lives of over 320 children across the country and continue to grow our reach every day.
+                  Founded in 2020 and officially registered in 2026, Print for a Child Foundation is a Ugandan non-profit dedicated to transforming lives through the power of education. We have impacted the lives of over 560 children across the country and continue to grow our reach every day.
                 </p>
               </div>
             </AnimateOnScroll>
@@ -69,7 +69,7 @@ export default function AboutPage() {
                       This experience fueled his commitment to change the narrative. In 2020, Paul started Print for a Child Foundation with the mission of bridging the educational gap through the provision of textbooks, storybooks, writing materials, and printed educational content to underserved areas.
                     </p>
                     <p>
-                      Today, the foundation has impacted the lives of over 320 children across the country, working hand-in-hand with schools, communities, and partners to create lasting educational impact across Uganda. The team of vibrant and energetic people continues to grow, driven by the belief that every child deserves a decent future through education.
+                      Today, the foundation has impacted the lives of over 560 children across the country, working hand-in-hand with schools, communities, and partners to create lasting educational impact across Uganda. The team of vibrant and energetic people continues to grow, driven by the belief that every child deserves a decent future through education.
                     </p>
                   </div>
                 </div>

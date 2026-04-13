@@ -29,9 +29,9 @@ const donationTypes = [
 ]
 
 const impactStats = [
-  { number: "15,000+", label: "Books Distributed", icon: BookOpen },
-  { number: "50+", label: "Schools Reached", icon: Building2 },
-  { number: "10,000+", label: "Children Impacted", icon: Users },
+  { number: "1,700+", label: "Books Distributed", icon: BookOpen },
+  { number: "11+", label: "Schools Reached", icon: Building2 },
+  { number: "560+", label: "Children Impacted", icon: Users },
 ]
 
 export default function DonatePage() {

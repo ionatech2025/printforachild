@@ -2,10 +2,10 @@
 // Simply change the numbers below to update the website
 
 export const impactStats = {
-  childrenReached: 5000,
-  schoolsSupported: 45,
-  booksPrinted: 15000,
-  volunteersJoined: 120,
+  childrenReached: 560,
+  schoolsSupported: 11,
+  booksPrinted: 1700,
+  volunteersJoined: 16,
 }
 
 // Uganda Education Crisis Statistics (sourced from UNESCO & UNEB reports)
@@ -21,16 +21,16 @@ export const educationCrisisStats = {
 // Organization timeline
 export const organizationInfo = {
   foundedYear: 2020,
-  registeredYear: 2025,
-  directChildrenImpacted: 320,
+  registeredYear: 2026,
+  directChildrenImpacted: 560,
   targetMaterials: 50000,
   targetSchools: 50,
 }
 
 // Founder profile
 export const founderProfile = {
-  name: 'Lwanawetaase Paul',
-  role: 'Co-Founder & Director',
+  name: 'Paul Lwanawetaase',
+  role: 'Founder & Team Leader',
   age: 30,
   location: 'Kampala, Uganda',
   bio: 'Born and raised in Uganda, Paul witnessed firsthand the severe lack of educational resources in rural schools — having personally experienced these challenges during his own early years in school. This experience fueled his lifelong commitment to change the narrative for Ugandan children. In 2020, he started Print for a Child Foundation with the mission of bridging the educational gap through the provision of textbooks, storybooks, writing materials, and printed educational content to underserved areas.',
@@ -39,8 +39,8 @@ export const founderProfile = {
 
 // Mission and Vision (from official grant proposal)
 export const missionVision = {
-  mission: 'To promote inclusive and equitable quality education by distributing free printed learning materials to underprivileged children in Uganda, ensuring every child has access to the educational resources they need to succeed and break the cycle of poverty through education.',
-  vision: 'A Uganda where every child, regardless of background, has access to the educational tools they need to succeed.',
+  mission: 'To print and distribute quality study materials to less privileged school children in Uganda, ensuring that every child has access to the education resources they need to succeed.',
+  vision: 'A Uganda where every child, regardless of background, has equal access to quality educational materials and the opportunity to achieve their full potential through learning.',
 }
 
 // Partners - Add or remove partners here
@@ -54,16 +54,16 @@ export const partners = [
 // Team members
 export const teamMembers = [
   {
-    name: 'Lwanawetaase Paul',
-    role: 'Co-Founder & Director',
+    name: 'Paul Lwanawetaase',
+    role: 'Team Leader',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
     bio: 'Born and raised in Uganda, Paul experienced the lack of educational resources firsthand during his early school years. This drove him to found Print for a Child in 2020, dedicating his life to ensuring every child has access to essential learning materials.',
   },
   {
-    name: 'Foundation Team',
-    role: 'Dedicated Volunteers',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
-    bio: 'Our vibrant and energetic team of volunteers works tirelessly across Uganda to print, distribute, and deliver educational materials to children in underserved communities.',
+    name: 'Namwase Rinah Marion',
+    role: 'Projects Coordinator',
+    image: '/placeholder-user.jpg',
+    bio: 'Rinah coordinates Print for a Child Foundation projects on the ground — working with schools, volunteers, and community partners to ensure learning materials reach the children who need them most. Photo coming soon.',
   },
 ]
 
