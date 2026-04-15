@@ -61,7 +61,7 @@ export default function OurWorkPage() {
             />
             <div className="absolute inset-0 bg-foreground/80" />
           </div>
-          
+
           <div className="container mx-auto px-4 relative z-10">
             <AnimateOnScroll>
               <div className="max-w-3xl mx-auto text-center">
@@ -127,7 +127,7 @@ export default function OurWorkPage() {
               <div className="relative">
                 {/* Vertical Line */}
                 <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-border hidden md:block" />
-                
+
                 {processSteps.map((step, index) => {
                   const Icon = step.icon
                   return (
@@ -139,7 +139,7 @@ export default function OurWorkPage() {
                             <Icon className="w-8 h-8 text-secondary-foreground" />
                           </div>
                         </div>
-                        
+
                         {/* Content */}
                         <div className="pt-3">
                           <span className="text-sm font-semibold text-secondary">Step {index + 1}</span>
@@ -198,7 +198,7 @@ export default function OurWorkPage() {
                   </Button>
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <div className="relative">
                   <Image
@@ -239,7 +239,7 @@ export default function OurWorkPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={100}>
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">
@@ -248,7 +248,7 @@ export default function OurWorkPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">
@@ -257,7 +257,7 @@ export default function OurWorkPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={300}>
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">
@@ -266,7 +266,7 @@ export default function OurWorkPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={400}>
                 <Card className="border-0 shadow-lg">
                   <CardContent className="p-6 text-center">
@@ -275,7 +275,7 @@ export default function OurWorkPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={500}>
                 <Card className="border-0 shadow-lg bg-secondary text-secondary-foreground">
                   <CardContent className="p-6 text-center">
@@ -403,7 +403,7 @@ export default function OurWorkPage() {
                       Donate Now
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
+                  <Button asChild size="lg" variant="outline" className="border-primary-foreground/30 text-blue-600 hover:text-white hover:bg-primary-foreground/10">
                     <Link href="/get-involved">
                       Partner With Us
                     </Link>

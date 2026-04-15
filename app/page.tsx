@@ -43,19 +43,19 @@ export default function HomePage() {
                   Empowering Through Education
                 </span>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={100}>
                 <h1 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-background leading-tight mb-6 text-balance">
                   Every Child Deserves a Book to Call Their Own
                 </h1>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <p className="text-lg md:text-xl text-background/90 mb-8 leading-relaxed">
                   Print for a Child Foundation provides quality printed study materials to less privileged school children across Uganda, transforming lives one book at a time.
                 </p>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={300}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
@@ -64,7 +64,7 @@ export default function HomePage() {
                       Donate Now
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-background/30 text-background hover:bg-background/10 font-semibold text-lg px-8">
+                  <Button asChild size="lg" variant="outline" className="border-background/30 text-background hover:bg-background/10 font-semibold text-lg px-8 text-color-white">
                     <Link href="/get-involved" className="flex items-center gap-2">
                       Get Involved
                       <ArrowRight className="w-5 h-5" />
@@ -178,7 +178,7 @@ export default function HomePage() {
                 Our Impact in Numbers
               </h2>
             </AnimateOnScroll>
-            
+
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
               <AnimateOnScroll delay={0}>
                 <div className="text-center">
@@ -188,7 +188,7 @@ export default function HomePage() {
                   <p className="text-primary-foreground/80 font-medium">Children Reached</p>
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={100}>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
@@ -197,7 +197,7 @@ export default function HomePage() {
                   <p className="text-primary-foreground/80 font-medium">Schools Supported</p>
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
@@ -206,7 +206,7 @@ export default function HomePage() {
                   <p className="text-primary-foreground/80 font-medium">Books Printed</p>
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={300}>
                 <div className="text-center">
                   <div className="text-4xl md:text-5xl lg:text-6xl font-bold mb-2">
@@ -275,7 +275,7 @@ export default function HomePage() {
                   <div className="absolute -bottom-6 -right-6 w-32 h-32 bg-secondary rounded-2xl -z-10" />
                 </div>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <div>
                   <h2 className="font-heading text-3xl md:text-4xl font-bold mb-6 text-foreground">
@@ -421,7 +421,7 @@ export default function HomePage() {
                       Donate Today
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10">
+                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-green-600 hover:bg-secondary-foreground/10">
                     <Link href="/get-involved">
                       Become a Volunteer
                     </Link>

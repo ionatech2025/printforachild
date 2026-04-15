@@ -66,7 +66,7 @@ export default function GalleryPage() {
                     <div className="text-center p-8">
                       <div className="w-20 h-20 rounded-full bg-secondary/10 flex items-center justify-center mx-auto mb-4">
                         <svg className="w-10 h-10 text-secondary" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
+                          <path d="M8 5v14l11-7z" />
                         </svg>
                       </div>
                       <p className="text-muted-foreground">
@@ -102,7 +102,7 @@ export default function GalleryPage() {
                       Donate Today
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10">
+                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-green-600 hover:bg-secondary-foreground/10">
                     <Link href="/get-involved" className="flex items-center gap-2">
                       Get Involved
                       <ArrowRight className="w-4 h-4" />
