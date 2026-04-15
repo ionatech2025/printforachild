@@ -82,7 +82,7 @@ export default function GetInvolvedPage() {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
+
       <main>
         {/* Hero Section */}
         <section className="relative py-20 md:py-28 bg-primary">
@@ -121,7 +121,7 @@ export default function GetInvolvedPage() {
                   Give Your Time, Change a Life
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Our volunteers are the heart of our organization. Join our team and 
+                  Our volunteers are the heart of our organization. Join our team and
                   experience the joy of putting books into the hands of children.
                 </p>
               </div>
@@ -164,15 +164,15 @@ export default function GetInvolvedPage() {
           <div className="container">
             <AnimateOnScroll>
               <div className="text-center mb-12">
-                <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/20 text-secondary-foreground mb-4">
-                  <Building2 className="h-4 w-4" />
-                  <span className="text-sm font-medium">Partner With Us</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-emerald-700 mb-4 transition-colors hover:bg-emerald-100">
+                  <Building2 className="h-3.5 w-3.5" />
+                  <span className="text-xs font-semibold uppercase tracking-wide">Partner With Us</span>
                 </div>
                 <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                   Strategic Partnerships
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  We collaborate with organizations that share our vision of a literate Uganda. 
+                  We collaborate with organizations that share our vision of a literate Uganda.
                   Explore partnership opportunities that align with your mission.
                 </p>
               </div>
@@ -240,7 +240,7 @@ export default function GetInvolvedPage() {
                   Make a Donation
                 </h2>
                 <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                  Your generous donation helps us print and distribute books to children 
+                  Your generous donation helps us print and distribute books to children
                   who need them most. Every contribution makes a difference.
                 </p>
               </div>
@@ -269,7 +269,7 @@ export default function GetInvolvedPage() {
                 <Heart className="h-12 w-12 mx-auto mb-6 opacity-80" />
                 <h3 className="text-2xl font-bold mb-4">Ready to Make an Impact?</h3>
                 <p className="mb-8 opacity-90">
-                  Your donation is tax-deductible and 100% goes towards our mission of 
+                  Your donation is tax-deductible and 100% goes towards our mission of
                   providing books to underserved children in Uganda.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -279,7 +279,7 @@ export default function GetInvolvedPage() {
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+                  <Button asChild size="lg" variant="outline" className="border-white text-blue-600 hover:text-white hover:bg-white/10">
                     <Link href="/contact">
                       Contact Us First
                     </Link>

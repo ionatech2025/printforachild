@@ -240,7 +240,7 @@ export default function AboutPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={100}>
                 <Card className="h-full border-0 shadow-lg text-center">
                   <CardContent className="p-8">
@@ -254,7 +254,7 @@ export default function AboutPage() {
                   </CardContent>
                 </Card>
               </AnimateOnScroll>
-              
+
               <AnimateOnScroll delay={200}>
                 <Card className="h-full border-0 shadow-lg text-center">
                   <CardContent className="p-8">
@@ -374,7 +374,7 @@ export default function AboutPage() {
                       Support Our Mission
                     </Link>
                   </Button>
-                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10">
+                  <Button asChild size="lg" variant="outline" className="border-secondary-foreground/30 text-green-600 hover:bg-secondary-foreground/10">
                     <Link href="/get-involved" className="flex items-center gap-2">
                       Get Involved
                       <ArrowRight className="w-4 h-4" />
