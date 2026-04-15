@@ -1,6 +1,8 @@
-# v0-printforachild-website-build
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
+# printforachild
+Printforachild is a Ugandan NGO that aism at supplying printed learning material to less privileged children across the country.
+
+It is a [Next.js](https://nextjs.org) project bootstrapped with [v0](https://v0.app).
 
 ## Built with v0
 
