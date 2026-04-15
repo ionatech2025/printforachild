@@ -1,5 +1,7 @@
 // Impact Statistics - Easy to update by NGO staff
 // Simply change the numbers below to update the website
+import paul from '@/public/media/team/Paul.jpeg'
+import rinah from '@/public/media/team/rina.jpg'
 
 export const impactStats = {
   childrenReached: 560,
@@ -38,7 +40,17 @@ export const founderProfile = {
   age: 30,
   location: 'Kampala, Uganda',
   bio: 'Born and raised in Uganda, Paul witnessed firsthand the severe lack of educational resources in rural schools — having personally experienced these challenges during his own early years in school. This experience fueled his lifelong commitment to change the narrative for Ugandan children. In 2020, he started Print for a Child Foundation with the mission of bridging the educational gap through the provision of textbooks, storybooks, writing materials, and printed educational content to underserved areas.',
-  image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
+  image: paul,
+}
+
+// Team member 2
+export const coFounderProfile = {
+  name: 'Namwase Rinah Marion',
+  role: 'Projects Coordinator',
+  age: 25,
+  location: 'Kampala, Uganda',
+  bio: 'Rinah coordinates Print for a Child Foundation projects on the ground — working with schools, volunteers, and community partners to ensure learning materials reach the children who need them most.',
+  image: rinah,
 }
 
 // Mission and Vision (from official grant proposal)
@@ -60,14 +72,14 @@ export const teamMembers = [
   {
     name: 'Paul Lwanawetaase',
     role: 'Team Leader',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
+    image: paul,
     bio: 'Born and raised in Uganda, Paul experienced the lack of educational resources firsthand during his early school years. This drove him to found Print for a Child Foundation in 2020, dedicating his life to ensuring every child has access to essential learning materials.',
   },
   {
     name: 'Namwase Rinah Marion',
     role: 'Projects Coordinator',
-    image: '/placeholder-user.jpg',
-    bio: 'Rinah coordinates Print for a Child Foundation projects on the ground — working with schools, volunteers, and community partners to ensure learning materials reach the children who need them most. Photo coming soon.',
+    image: rinah,
+    bio: 'Rinah coordinates Print for a Child Foundation projects on the ground — working with schools, volunteers, and community partners to ensure learning materials reach the children who need them most.',
   },
 ]
 
