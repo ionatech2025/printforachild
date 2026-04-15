@@ -27,7 +27,7 @@ export default function HomePage() {
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg"
+              src="/media/client-april-2026/classroom-hero.webp"
               alt="Ugandan children reading books together"
               fill
               className="object-cover"
@@ -59,7 +59,7 @@ export default function HomePage() {
               <AnimateOnScroll delay={300}>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold text-lg px-8">
-                    <Link href="/donate" className="flex items-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center gap-2">
                       <Heart className="w-5 h-5" />
                       Donate Now
                     </Link>
@@ -265,8 +265,8 @@ export default function HomePage() {
               <AnimateOnScroll>
                 <div className="relative">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20260314_084537-hOPQcW4ndRa9HukSuXJ4HqPwiMqOs4.jpg"
-                    alt="Two happy children showing their storybooks"
+                    src="/media/client-april-2026/notebook-smiles.jpg"
+                    alt="Two students proudly holding their new exercise books"
                     width={600}
                     height={450}
                     className="h-auto w-full rounded-2xl shadow-2xl"
@@ -367,7 +367,7 @@ export default function HomePage() {
               </div>
             </AnimateOnScroll>
 
-            <div className="grid md:grid-cols-3 gap-8">
+            <div className={blogPosts.length === 1 ? "grid max-w-xl mx-auto gap-8" : "grid md:grid-cols-3 gap-8"}>
               {blogPosts.slice(0, 3).map((post, index) => (
                 <AnimateOnScroll key={post.slug} delay={index * 100}>
                   <Link href={`/blog/${post.slug}`} className="group">
@@ -416,7 +416,7 @@ export default function HomePage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    <Link href="/donate" className="flex items-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center gap-2">
                       <Heart className="w-5 h-5" />
                       Donate Today
                     </Link>

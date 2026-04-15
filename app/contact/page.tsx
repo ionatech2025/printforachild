@@ -305,7 +305,7 @@ export default function ContactPage() {
             <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
               {[
                 {
-                  q: "How can I volunteer with Print for a Child?",
+                  q: "How can I volunteer with Print for a Child Foundation?",
                   a: "Fill out our contact form selecting 'Volunteer Application' or visit our Get Involved page for more details on volunteer opportunities."
                 },
                 {

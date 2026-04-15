@@ -53,7 +53,7 @@ export default function OurWorkPage() {
         <section className="relative pt-32 pb-20">
           <div className="absolute inset-0 z-0">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111626-PsURhhbJHDroCGIrvFZsvdWFCeS0MI.jpg"
+              src="/media/client-april-2026/classroom-portrait.jpg"
               alt="Students reading books during a community event"
               fill
               className="object-cover"
@@ -202,8 +202,8 @@ export default function OurWorkPage() {
               <AnimateOnScroll delay={200}>
                 <div className="relative">
                   <Image
-                    src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111554-fmjjAAMjyCmZjAnis9dyfaT2gZjKyz.jpg"
-                    alt="Students reading Primary English textbooks"
+                    src="/media/client-april-2026/blue-book-smile.jpg"
+                    alt="A student proudly holding a newly received book"
                     width={600}
                     height={450}
                     className="h-auto w-full rounded-2xl shadow-2xl"
@@ -398,7 +398,7 @@ export default function OurWorkPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    <Link href="/donate" className="flex items-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center gap-2">
                       <Heart className="w-5 h-5" />
                       Donate Now
                     </Link>

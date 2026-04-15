@@ -41,7 +41,7 @@ export const metadata: Metadata = {
     description: 'Print for a Child Foundation prints and distributes study materials to less privileged school children in Uganda.',
     images: [
       {
-        url: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
+        url: '/media/client-april-2026/classroom-hero.webp',
         width: 1200,
         height: 630,
         alt: 'Ugandan children reading books provided by Print for a Child Foundation',
@@ -52,7 +52,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Print for a Child Foundation | Empowering Ugandan Children Through Education',
     description: 'Print for a Child Foundation prints and distributes study materials to less privileged school children in Uganda.',
-    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg'],
+    images: ['/media/client-april-2026/classroom-hero.webp'],
   },
   robots: {
     index: true,
@@ -67,9 +67,9 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico' },
+      { url: '/brand/logo-foundation.svg', type: 'image/svg+xml' },
     ],
-    apple: '/apple-touch-icon.png',
+    apple: '/apple-icon.png',
   },
 }
 

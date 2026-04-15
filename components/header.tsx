@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { Menu, X, Heart } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { SiteLogo } from '@/components/site-logo'
-import { navLinks } from '@/lib/data'
+import { navLinks, siteIdentity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
 export function Header() {
@@ -35,10 +35,10 @@ export function Header() {
           <Link href="/" className="flex items-center gap-3 shrink-0">
             <SiteLogo className="size-11 sm:size-[60px]" />
             <span className={cn(
-              "font-heading font-bold text-lg hidden sm:block transition-colors",
+              "hidden md:block max-w-[13rem] font-heading text-sm leading-tight font-bold transition-colors lg:text-base",
               isScrolled ? "text-foreground" : "text-foreground"
             )}>
-              Print for a Child
+              {siteIdentity.name}
             </span>
           </Link>
 
@@ -61,7 +61,7 @@ export function Header() {
           {/* Desktop CTA */}
           <div className="hidden lg:flex items-center gap-4">
             <Button asChild variant="default" className="bg-primary hover:bg-primary/90">
-              <Link href="/donate" className="flex items-center gap-2">
+              <Link href="/donate#payment-methods" className="flex items-center gap-2">
                 <Heart className="w-4 h-4" />
                 Donate Now
               </Link>
@@ -99,7 +99,7 @@ export function Header() {
                 ))}
                 <div className="pt-4 border-t">
                   <Button asChild className="w-full bg-primary hover:bg-primary/90">
-                    <Link href="/donate" className="flex items-center justify-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center justify-center gap-2">
                       <Heart className="w-4 h-4" />
                       Donate Now
                     </Link>

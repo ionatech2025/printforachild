@@ -50,7 +50,7 @@ export default function NotFound() {
                 <Link href="/about" className="text-primary hover:underline">About Us</Link>
                 <Link href="/our-work" className="text-primary hover:underline">Our Work</Link>
                 <Link href="/get-involved" className="text-primary hover:underline">Get Involved</Link>
-                <Link href="/donate" className="text-primary hover:underline">Donate</Link>
+                <Link href="/donate#payment-methods" className="text-primary hover:underline">Donate</Link>
               </div>
             </div>
           </div>

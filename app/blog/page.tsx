@@ -82,43 +82,45 @@ export default function BlogPage() {
             )}
 
             {/* Other Posts */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {blogPosts.slice(1).map((post, index) => (
-                <AnimateOnScroll key={post.slug} delay={index * 100}>
-                  <Link href={`/blog/${post.slug}`} className="group">
-                    <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                      <div className="relative aspect-[16/10] overflow-hidden">
-                        <Image
-                          src={post.image}
-                          alt={post.title}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                        />
-                      </div>
-                      <CardContent className="p-6">
-                        <time className="text-sm text-muted-foreground">
-                          {new Date(post.date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          })}
-                        </time>
-                        <h3 className="font-heading font-semibold text-xl mt-2 mb-3 text-foreground group-hover:text-primary transition-colors">
-                          {post.title}
-                        </h3>
-                        <p className="text-muted-foreground line-clamp-2 mb-4">
-                          {post.summary}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
-                          Read More
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </CardContent>
-                    </Card>
-                  </Link>
-                </AnimateOnScroll>
-              ))}
-            </div>
+            {blogPosts.length > 1 && (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {blogPosts.slice(1).map((post, index) => (
+                  <AnimateOnScroll key={post.slug} delay={index * 100}>
+                    <Link href={`/blog/${post.slug}`} className="group">
+                      <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                        <div className="relative aspect-[16/10] overflow-hidden">
+                          <Image
+                            src={post.image}
+                            alt={post.title}
+                            fill
+                            className="object-cover transition-transform duration-300 group-hover:scale-105"
+                          />
+                        </div>
+                        <CardContent className="p-6">
+                          <time className="text-sm text-muted-foreground">
+                            {new Date(post.date).toLocaleDateString('en-US', {
+                              year: 'numeric',
+                              month: 'long',
+                              day: 'numeric',
+                            })}
+                          </time>
+                          <h3 className="font-heading font-semibold text-xl mt-2 mb-3 text-foreground group-hover:text-primary transition-colors">
+                            {post.title}
+                          </h3>
+                          <p className="text-muted-foreground line-clamp-2 mb-4">
+                            {post.summary}
+                          </p>
+                          <span className="inline-flex items-center gap-2 text-primary font-medium text-sm group-hover:gap-3 transition-all">
+                            Read More
+                            <ArrowRight className="w-4 h-4" />
+                          </span>
+                        </CardContent>
+                      </Card>
+                    </Link>
+                  </AnimateOnScroll>
+                ))}
+              </div>
+            )}
 
             {/* No posts message */}
             {blogPosts.length === 0 && (

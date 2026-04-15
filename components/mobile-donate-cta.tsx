@@ -47,7 +47,7 @@ export function MobileDonateCTA() {
             size="sm"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
           >
-            <Link href="/donate" className="flex items-center gap-2">
+            <Link href="/donate#payment-methods" className="flex items-center gap-2">
               <Heart className="w-4 h-4" />
               Donate
             </Link>

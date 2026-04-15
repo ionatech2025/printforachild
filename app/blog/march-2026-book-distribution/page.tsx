@@ -11,11 +11,11 @@ import { ShareButtons } from '@/components/share-buttons'
 
 export const metadata: Metadata = {
   title: 'March 2026 Book Distribution Drive',
-  description: 'We successfully distributed over 2,000 books to 5 schools in the Mukono district, reaching more than 800 children with educational materials.',
+  description: 'We successfully distributed 200 books in the Mukono district, bringing essential educational materials to children who needed them most.',
   openGraph: {
     title: 'March 2026 Book Distribution Drive | Print for a Child Foundation',
-    description: 'We successfully distributed over 2,000 books to 5 schools in the Mukono district, reaching more than 800 children with educational materials.',
-    images: ['https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg'],
+    description: 'We successfully distributed 200 books in the Mukono district, bringing essential educational materials to children who needed them most.',
+    images: ['/media/client-april-2026/classroom-hero.webp'],
   },
 }
 
@@ -23,8 +23,8 @@ export default function BlogPostPage() {
   const post = {
     title: 'March 2026 Book Distribution Drive',
     date: '2026-03-15',
-    author: 'Print for a Child Team',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
+    author: 'Print for a Child Foundation Team',
+    image: '/media/client-april-2026/classroom-hero.webp',
   }
 
   return (
@@ -89,9 +89,9 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-img:rounded-xl">
+              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
                 <p className="lead text-xl text-muted-foreground">
-                  We are thrilled to share the success of our March 2026 Book Distribution Drive, where we successfully distributed over 2,000 books to 5 schools in the Mukono district, reaching more than 800 children with educational materials.
+                  We are thrilled to share the success of our March 2026 Book Distribution Drive, where we successfully distributed 200 books in the Mukono district, reaching children with educational materials.
                 </p>
 
                 <h2>A Day of Joy and Learning</h2>
@@ -102,18 +102,6 @@ export default function BlogPostPage() {
                 <p>
                   The excitement was palpable as children gathered in their school compounds, eagerly awaiting the arrival of their new books. For many of these students, this would be the first time they would have their own personal textbook to take home and study with.
                 </p>
-
-                <h2>Schools Visited</h2>
-                <p>
-                  During this distribution drive, we were able to reach:
-                </p>
-                <ul>
-                  <li>St. Mary&apos;s Primary School - 200 students</li>
-                  <li>Mukono Central Primary - 180 students</li>
-                  <li>Hope Academy - 150 students</li>
-                  <li>Blessed Junior School - 140 students</li>
-                  <li>Grace Primary School - 130 students</li>
-                </ul>
 
                 <h2>The Impact</h2>
                 <p>
@@ -135,7 +123,7 @@ export default function BlogPostPage() {
                 </p>
 
                 <p>
-                  If you would like to support our next distribution drive or volunteer with us, please visit our <Link href="/get-involved">Get Involved</Link> page or <Link href="/donate">make a donation</Link> today.
+                  If you would like to support our next distribution drive or volunteer with us, please visit our <Link href="/get-involved">Get Involved</Link> page or <Link href="/donate#payment-methods">make a donation</Link> today.
                 </p>
               </article>
             </AnimateOnScroll>

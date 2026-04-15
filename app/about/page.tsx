@@ -27,7 +27,7 @@ export default function AboutPage() {
             <AnimateOnScroll>
               <div className="max-w-3xl mx-auto text-center">
                 <h1 className="font-heading text-4xl md:text-5xl font-bold mb-6 text-foreground">
-                  About Print for a Child
+                  About Print for a Child Foundation
                 </h1>
                 <p className="text-lg text-muted-foreground leading-relaxed">
                   Founded in 2020 and officially registered in 2026, Print for a Child Foundation is a Ugandan non-profit dedicated to transforming lives through the power of education. We have impacted the lives of over 560 children across the country and continue to grow our reach every day.
@@ -369,7 +369,7 @@ export default function AboutPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    <Link href="/donate" className="flex items-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center gap-2">
                       <Heart className="w-5 h-5" />
                       Support Our Mission
                     </Link>

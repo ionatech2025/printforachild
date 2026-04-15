@@ -23,7 +23,7 @@ export default function BlogPostPage() {
   const post = {
     title: 'New Partnership with NCDC Uganda',
     date: '2026-02-28',
-    author: 'Print for a Child Team',
+    author: 'Print for a Child Foundation Team',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111939-mKtAy9yUAODhVhEGYQniuMM6xOXaZE.jpg',
   }
 
@@ -89,7 +89,7 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-img:rounded-xl">
+              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
                 <p className="lead text-xl text-muted-foreground">
                   We are excited to announce a groundbreaking partnership with the National Curriculum Development Centre (NCDC) Uganda that will significantly enhance the quality and relevance of the educational materials we provide to schools across the country.
                 </p>
@@ -130,7 +130,7 @@ export default function BlogPostPage() {
                 </p>
 
                 <p>
-                  We invite donors and partners to join us in this exciting new chapter. Your support will help us leverage this partnership to reach even more children with the books they need to succeed. <Link href="/donate">Make a donation today</Link> or <Link href="/get-involved">learn how you can get involved</Link>.
+                  We invite donors and partners to join us in this exciting new chapter. Your support will help us leverage this partnership to reach even more children with the books they need to succeed. <Link href="/donate#payment-methods">Make a donation today</Link> or <Link href="/get-involved">learn how you can get involved</Link>.
                 </p>
               </article>
             </AnimateOnScroll>

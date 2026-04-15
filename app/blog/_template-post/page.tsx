@@ -52,7 +52,7 @@ export default function BlogPostPage() {
   const post = {
     title: 'Your Blog Post Title Here',
     date: '2026-04-10', // Format: YYYY-MM-DD
-    author: 'Print for a Child Team',
+    author: 'Print for a Child Foundation Team',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
   }
 
@@ -120,7 +120,7 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-img:rounded-xl">
+              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
                 {/* Lead paragraph - appears larger */}
                 <p className="lead text-xl text-muted-foreground">
                   Your introduction paragraph goes here. This should summarize what the article is about.
@@ -155,7 +155,7 @@ export default function BlogPostPage() {
 
                 {/* Links */}
                 <p>
-                  Check out our <Link href="/donate">donation page</Link> or <Link href="/get-involved">get involved</Link>.
+                  Check out our <Link href="/donate#payment-methods">donation page</Link> or <Link href="/get-involved">get involved</Link>.
                 </p>
               </article>
             </AnimateOnScroll>

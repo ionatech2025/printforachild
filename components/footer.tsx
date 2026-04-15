@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Heart, Mail, Phone, MapPin, Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
 import { SiteLogo } from '@/components/site-logo'
-import { navLinks, contactInfo } from '@/lib/data'
+import { navLinks, contactInfo, siteIdentity } from '@/lib/data'
 
 export function Footer() {
   const currentYear = new Date().getFullYear()
@@ -16,8 +16,8 @@ export function Footer() {
           <div className="space-y-6">
             <Link href="/" className="flex items-center gap-3">
               <SiteLogo className="size-12 sm:size-[60px]" />
-              <span className="font-heading font-bold text-xl text-background">
-                Print for a Child
+              <span className="max-w-[14rem] font-heading text-lg leading-tight font-bold text-background">
+                {siteIdentity.name}
               </span>
             </Link>
             <p className="text-background/80 leading-relaxed">
@@ -145,7 +145,7 @@ export function Footer() {
         <div className="container mx-auto px-4 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-background/60">
             <p>
-              {currentYear} Print for a Child Foundation. All rights reserved.
+              {currentYear} {siteIdentity.name}. All rights reserved.
             </p>
             <p className="flex items-center gap-1">
               Made with <Heart className="w-4 h-4 text-accent fill-accent" /> for the children of Uganda

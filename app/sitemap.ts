@@ -18,8 +18,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Blog posts
   const blogPosts = [
     '/blog/march-2026-book-distribution',
-    '/blog/new-partnership-ncdc',
-    '/blog/volunteer-spotlight-february',
   ]
 
   const mainPageEntries = mainPages.map((route) => ({

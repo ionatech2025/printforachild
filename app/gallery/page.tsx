@@ -97,7 +97,7 @@ export default function GalleryPage() {
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold">
-                    <Link href="/donate" className="flex items-center gap-2">
+                    <Link href="/donate#payment-methods" className="flex items-center gap-2">
                       <Heart className="w-5 h-5" />
                       Donate Today
                     </Link>

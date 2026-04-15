@@ -8,6 +8,10 @@ export const impactStats = {
   volunteersJoined: 16,
 }
 
+export const siteIdentity = {
+  name: 'Print for a Child Foundation',
+}
+
 // Uganda Education Crisis Statistics (sourced from UNESCO & UNEB reports)
 export const educationCrisisStats = {
   dropoutBeforeP7: 43,          // % of pupils who drop out before P7
@@ -57,7 +61,7 @@ export const teamMembers = [
     name: 'Paul Lwanawetaase',
     role: 'Team Leader',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/file_0000000079bc71fdb2969af5eeb7567b-m7k45y8pk7j2oRSjb62iCNGiDeB5A3.png',
-    bio: 'Born and raised in Uganda, Paul experienced the lack of educational resources firsthand during his early school years. This drove him to found Print for a Child in 2020, dedicating his life to ensuring every child has access to essential learning materials.',
+    bio: 'Born and raised in Uganda, Paul experienced the lack of educational resources firsthand during his early school years. This drove him to found Print for a Child Foundation in 2020, dedicating his life to ensuring every child has access to essential learning materials.',
   },
   {
     name: 'Namwase Rinah Marion',
@@ -92,69 +96,44 @@ export const testimonials = [
 // Gallery images
 export const galleryImages = [
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20260314_084535-j1oJ3V7VuupdRYJRKYUXekbLXOu7BF.jpg',
-    alt: 'Student reading "Finding Destiny" book in library',
-    caption: 'A student engrossed in reading at a local library',
+    src: '/media/client-april-2026/classroom-hero.webp',
+    alt: 'Students smiling and learning together in a classroom',
+    caption: 'A lively classroom where curiosity and confidence grow together',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111939-mKtAy9yUAODhVhEGYQniuMM6xOXaZE.jpg',
-    alt: 'NCDC staff showing textbooks to students',
-    caption: 'NCDC representatives distributing educational materials',
+    src: '/media/client-april-2026/book-handout.jpg',
+    alt: 'A volunteer handing books to young children outdoors',
+    caption: 'Receiving new books is often the first step toward staying in school',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111554-fmjjAAMjyCmZjAnis9dyfaT2gZjKyz.jpg',
-    alt: 'Students reading Primary English textbooks',
-    caption: 'Students studying with their new Primary English books',
+    src: '/media/client-april-2026/library-study.jpg',
+    alt: 'Learners gathered around textbooks in a library setting',
+    caption: 'Shared reading spaces give children room to learn side by side',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20260314_084537-hOPQcW4ndRa9HukSuXJ4HqPwiMqOs4.jpg',
-    alt: 'Two children happily showing their storybooks',
-    caption: 'The joy of learning with colorful storybooks',
+    src: '/media/client-april-2026/notebook-smiles.jpg',
+    alt: 'Two students proudly holding their new exercise books',
+    caption: 'Each notebook we distribute represents a child ready to keep learning',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111931-Bowf1ccD7UPW7uvKsrl77CstMauaHv.jpg',
-    alt: 'Student reading with NCDC volunteer',
-    caption: 'One-on-one reading sessions make a difference',
+    src: '/media/client-april-2026/blue-book-smile.jpg',
+    alt: 'A smiling girl holding a blue book in class',
+    caption: 'The confidence that comes from having a book of your own',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111934-kCqHLGzFpOjxbApTNEH3sn4PhX0AF6.jpg',
-    alt: 'Group reading session outdoors',
-    caption: 'Community reading events bring families together',
+    src: '/media/client-april-2026/classroom-portrait.jpg',
+    alt: 'A young learner reading attentively during class',
+    caption: 'Focused reading time helps children build lasting literacy skills',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/xssnce-EcxhTXvCzHl3ecX5huytLCxxhraLiL.jpg',
-    alt: 'Large group of students in blue uniforms',
-    caption: 'Reaching schools across rural Uganda',
+    src: '/media/client-april-2026/classroom-reading.png',
+    alt: 'Two children sharing a workbook while seated in class',
+    caption: 'Children learn faster when quality materials are within reach',
   },
   {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111853-INGlVNWVcVtqFcudC7otvi0wkM1mqS.jpg',
-    alt: 'Young children at St. Mary\'s reading together',
-    caption: 'Young learners discovering the world through books',
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
-    alt: 'Large gathering of students reading books',
-    caption: 'Book distribution event at a primary school',
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111918-AF8jLsLkQDaVuLGP8aoJ1dxR86Swaf.jpg',
-    alt: 'Students reading on a playground slide',
-    caption: 'Reading can happen anywhere - even on playground equipment!',
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250518_172833-SPWejZxQVSXLeJQdGYF7xxrxNb7vod.jpg',
-    alt: 'Three happy children in school uniforms',
-    caption: 'Smiles that show the impact of education',
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111626-PsURhhbJHDroCGIrvFZsvdWFCeS0MI.jpg',
-    alt: 'Students reading in an outdoor gathering',
-    caption: 'Community-wide reading initiatives',
-  },
-  {
-    src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/gzvs13-JHMWeAAmIJ9TSEzD5eVloMCUlQRpnu.jpg',
-    alt: 'Girls in plaid uniforms reading books',
-    caption: 'Empowering girls through education',
+    src: '/media/client-april-2026/celebration-books.gif',
+    alt: 'Students raising colorful storybooks during a reading celebration',
+    caption: 'Reading celebrations turn books into moments children remember',
   },
 ]
 
@@ -164,25 +143,9 @@ export const blogPosts = [
     slug: 'march-2026-book-distribution',
     title: 'March 2026 Book Distribution Drive',
     date: '2026-03-15',
-    summary: 'We successfully distributed over 2,000 books to 5 schools in the Mukono district, reaching more than 800 children with educational materials.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111620-jUmqqfEwZCi0ZuCSVzaLyDn9HNAxoL.jpg',
-    author: 'Print for a Child Team',
-  },
-  {
-    slug: 'new-partnership-ncdc',
-    title: 'New Partnership with NCDC Uganda',
-    date: '2026-02-28',
-    summary: 'We are excited to announce our partnership with the National Curriculum Development Centre to provide curriculum-aligned materials to schools.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111939-mKtAy9yUAODhVhEGYQniuMM6xOXaZE.jpg',
-    author: 'Print for a Child Team',
-  },
-  {
-    slug: 'volunteer-spotlight-february',
-    title: 'Volunteer Spotlight: Making a Difference Together',
-    date: '2026-02-14',
-    summary: 'Meet the dedicated volunteers who make our mission possible. Their commitment to children\'s education in Uganda is truly inspiring.',
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111931-Bowf1ccD7UPW7uvKsrl77CstMauaHv.jpg',
-    author: 'Print for a Child Team',
+    summary: 'We successfully distributed 200 books in the Mukono district, delivering essential educational materials where they were needed most.',
+    image: '/media/client-april-2026/classroom-hero.webp',
+    author: 'Print for a Child Foundation Team',
   },
 ]
 
@@ -232,6 +195,15 @@ export const contactInfo = {
     instagram: 'https://instagram.com/printforachild',
     linkedin: 'https://linkedin.com/company/printforachild',
   },
+}
+
+export const paymentInfo = {
+  // Update these values if the foundation starts using a different
+  // payment number or a dedicated PayPal business account.
+  mobileMoneyLabel: 'MTN / Airtel Mobile Money',
+  mobileMoneyNumber: contactInfo.phone,
+  paypalBusinessEmail: 'printforachildfoundation@gmail.com',
+  paypalItemName: 'Support Print for a Child Foundation',
 }
 
 // Donation options

@@ -23,7 +23,7 @@ export default function BlogPostPage() {
   const post = {
     title: 'Volunteer Spotlight: Making a Difference Together',
     date: '2026-02-14',
-    author: 'Print for a Child Team',
+    author: 'Print for a Child Foundation Team',
     image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250519_111931-Bowf1ccD7UPW7uvKsrl77CstMauaHv.jpg',
   }
 
@@ -89,7 +89,7 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="max-w-3xl mx-auto prose prose-lg prose-headings:font-heading prose-headings:font-bold prose-a:text-primary prose-img:rounded-xl">
+              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
                 <p className="lead text-xl text-muted-foreground">
                   Behind every successful book distribution and every smiling child who receives educational materials, there are dedicated volunteers who make it all possible. Today, we celebrate the incredible individuals who give their time, energy, and hearts to our mission.
                 </p>

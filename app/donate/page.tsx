@@ -12,9 +12,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { Heart, BookOpen, Users, Building2, Gift, Shield, CheckCircle2, ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
-import { contactInfo } from "@/lib/data"
+import { paymentInfo } from "@/lib/data"
 
 const donationAmounts = [
+  { value: "10000", label: "UGX 10,000", impact: "A first set of reading materials" },
   { value: "25000", label: "UGX 25,000", impact: "2 storybooks for a child" },
   { value: "50000", label: "UGX 50,000", impact: "5 books for young readers" },
   { value: "100000", label: "UGX 100,000", impact: "Classroom reading corner" },
@@ -35,10 +36,10 @@ const impactStats = [
 ]
 
 export default function DonatePage() {
-  const [selectedAmount, setSelectedAmount] = useState("100000")
+  const [selectedAmount, setSelectedAmount] = useState("10000")
   const [customAmount, setCustomAmount] = useState("")
   const [donationType, setDonationType] = useState("one-time")
-  const dialablePhone = contactInfo.phone.replace(/\s+/g, "")
+  const dialablePhone = paymentInfo.mobileMoneyNumber.replace(/\s+/g, "")
 
   const getDisplayAmount = () => {
     if (selectedAmount === "custom") {
@@ -46,6 +47,17 @@ export default function DonatePage() {
     }
     return `UGX ${parseInt(selectedAmount).toLocaleString()}`
   }
+
+  const paypalUrl = `https://www.paypal.com/cgi-bin/webscr?${new URLSearchParams({
+    cmd: "_donations",
+    business: paymentInfo.paypalBusinessEmail,
+    currency_code: "USD",
+    item_name: paymentInfo.paypalItemName,
+  }).toString()}`
+
+  const mobileMoneyWhatsAppUrl = `https://wa.me/${dialablePhone.replace(/^\+/, "")}?text=${encodeURIComponent(
+    `Hello Print for a Child Foundation, I would like to make a ${donationType === "monthly" ? "monthly" : "one-time"} donation of ${getDisplayAmount()} via mobile money. Please guide me on the next step.`
+  )}`
 
   return (
     <div className="min-h-screen bg-background">
@@ -56,7 +68,7 @@ export default function DonatePage() {
         <section className="relative py-20 md:py-28 bg-primary overflow-hidden">
           <div className="absolute inset-0 opacity-10">
             <Image
-              src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20260314_084537-hOPQcW4ndRa9HukSuXJ4HqPwiMqOs4.jpg"
+              src="/media/client-april-2026/book-handout.jpg"
               alt="Happy children with books"
               fill
               className="object-cover"
@@ -95,7 +107,7 @@ export default function DonatePage() {
         </section>
 
         {/* Donation Form Section */}
-        <section className="py-16 md:py-24">
+        <section id="payment-methods" className="scroll-mt-28 py-16 md:py-24">
           <div className="container">
             <div className="grid lg:grid-cols-5 gap-12 max-w-6xl mx-auto">
               {/* Donation Form */}
@@ -105,7 +117,7 @@ export default function DonatePage() {
                     <CardHeader>
                       <CardTitle className="text-2xl">Make Your Donation</CardTitle>
                       <CardDescription>
-                        Choose an amount and complete your donation to support children&apos;s literacy in Uganda.
+                        Choose an amount and continue with mobile money or PayPal to support children&apos;s literacy in Uganda.
                       </CardDescription>
                     </CardHeader>
                     <CardContent>
@@ -215,32 +227,58 @@ export default function DonatePage() {
                             <p className="text-sm text-muted-foreground text-center mb-2">
                               Choose your preferred payment method:
                             </p>
-                            <div className="grid gap-3">
-                              {/* PayPal Donate Button - Replace with actual PayPal.me link */}
-                              <Button asChild size="lg" className="w-full">
-                                <a 
-                                  href="https://www.paypal.com/donate/?hosted_button_id=YOUR_PAYPAL_BUTTON_ID" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                >
-                                  Donate via PayPal
-                                  <ArrowRight className="ml-2 h-4 w-4" />
-                                </a>
-                              </Button>
-                              {/* GoFundMe Link - Replace with actual campaign URL */}
-                              <Button asChild size="lg" variant="outline" className="w-full">
-                                <a 
-                                  href="https://www.gofundme.com/f/print-for-a-child-foundation" 
-                                  target="_blank" 
-                                  rel="noopener noreferrer"
-                                >
-                                  Donate via GoFundMe
-                                  <ArrowRight className="ml-2 h-4 w-4" />
-                                </a>
-                              </Button>
+                            <div className="grid gap-4">
+                              <div className="rounded-xl border border-primary/10 bg-background p-4 text-left">
+                                <p className="font-semibold text-foreground">Donate via {paymentInfo.mobileMoneyLabel}</p>
+                                <p className="mt-1 text-sm text-muted-foreground">
+                                  Use our verified number{" "}
+                                  <a href={`tel:${dialablePhone}`} className="font-medium text-primary hover:underline">
+                                    {paymentInfo.mobileMoneyNumber}
+                                  </a>{" "}
+                                  and mention {getDisplayAmount()} when you contact us.
+                                </p>
+                                <div className="mt-4 grid gap-3 sm:grid-cols-2">
+                                  <Button asChild size="lg" className="w-full">
+                                    <a href={`tel:${dialablePhone}`}>
+                                      Start Mobile Money
+                                      <ArrowRight className="ml-2 h-4 w-4" />
+                                    </a>
+                                  </Button>
+                                  <Button asChild size="lg" variant="outline" className="w-full">
+                                    <a href={mobileMoneyWhatsAppUrl} target="_blank" rel="noopener noreferrer">
+                                      WhatsApp Us
+                                      <ArrowRight className="ml-2 h-4 w-4" />
+                                    </a>
+                                  </Button>
+                                </div>
+                              </div>
+                              <div className="rounded-xl border border-border bg-background p-4 text-left">
+                                <p className="font-semibold text-foreground">Donate via PayPal</p>
+                                <p className="mt-1 text-sm text-muted-foreground">
+                                  Open secure PayPal checkout in a new tab and complete your donation there.
+                                </p>
+                                <Button asChild size="lg" variant="outline" className="mt-4 w-full">
+                                  <a href={paypalUrl} target="_blank" rel="noopener noreferrer">
+                                    Continue to PayPal
+                                    <ArrowRight className="ml-2 h-4 w-4" />
+                                  </a>
+                                </Button>
+                              </div>
                             </div>
                             <p className="text-xs text-center text-muted-foreground">
-                              You will be redirected to a secure external payment page
+                              Mobile money and PayPal are completed outside this website for security.
+                            </p>
+                            {donationType === "monthly" && (
+                              <p className="text-xs text-center text-muted-foreground">
+                                For monthly giving, tell us you want a recurring donation when you contact us or when you reach PayPal.
+                              </p>
+                            )}
+                            <p className="text-xs text-center text-muted-foreground">
+                              Need help? Call{" "}
+                              <a href={`tel:${dialablePhone}`} className="text-primary hover:underline">
+                                {paymentInfo.mobileMoneyNumber}
+                              </a>
+                              .
                             </p>
                           </div>
                         </div>
@@ -275,15 +313,15 @@ export default function DonatePage() {
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                          Tax-deductible contributions
+                          Verified mobile money contact line
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                          Secure payment processing
+                          Secure third-party PayPal checkout
                         </li>
                         <li className="flex items-start gap-2">
                           <CheckCircle2 className="h-4 w-4 text-primary mt-0.5 shrink-0" />
-                          Regular impact reports
+                          Transparent follow-up on where support goes
                         </li>
                       </ul>
                     </CardContent>
@@ -298,17 +336,21 @@ export default function DonatePage() {
                         <div>
                           <h4 className="font-semibold text-foreground">Bank Transfer</h4>
                           <p className="text-muted-foreground">
-                            Equity Bank Uganda<br />
-                            Account: 1234567890123<br />
-                            Swift: EQBLUGKA
+                            Contact us for current bank details before sending a transfer.
                           </p>
                         </div>
                         <div>
                           <h4 className="font-semibold text-foreground">Mobile Money</h4>
                           <p className="text-muted-foreground">
-                            MTN/Airtel:{" "}
+                            {paymentInfo.mobileMoneyLabel}:{" "}
                             <a href={`tel:${dialablePhone}`} className="text-primary hover:underline">
-                              {contactInfo.phone}
+                              {paymentInfo.mobileMoneyNumber}
+                            </a>
+                          </p>
+                          <p className="mt-1 text-muted-foreground">
+                            Or{" "}
+                            <a href={mobileMoneyWhatsAppUrl} target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
+                              message us on WhatsApp
                             </a>
                           </p>
                         </div>
@@ -330,7 +372,7 @@ export default function DonatePage() {
                 <AnimateOnScroll>
                   <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
                     <Image
-                      src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/20250518_172833-SPWejZxQVSXLeJQdGYF7xxrxNb7vod.jpg"
+                      src="/media/client-april-2026/classroom-reading.png"
                       alt="Happy children with their new books"
                       fill
                       className="object-cover"
