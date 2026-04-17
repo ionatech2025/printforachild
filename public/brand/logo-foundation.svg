@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 320" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Print for a Child Foundation logo</title>
+  <desc id="logoDesc">Three stylized children above an orange arc with the organization name.</desc>
+  <defs>
+    <path id="foundationArc" d="M62 204 A98 98 0 0 0 258 204" />
+  </defs>
+  <path
+    d="M54 212 A106 106 0 0 0 266 212"
+    fill="none"
+    stroke="#f89c1c"
+    stroke-linecap="round"
+    stroke-width="18"
+  />
+  <text
+    fill="#ed1b2f"
+    font-family="Arial, Helvetica, sans-serif"
+    font-size="18"
+    font-weight="700"
+    letter-spacing="0.7"
+  >
+    <textPath href="#foundationArc" startOffset="50%" text-anchor="middle">
+      PRINT FOR A CHILD FOUNDATION
+    </textPath>
+  </text>
+  <g fill="#33359a">
+    <path d="M92 136 L135 154 C126 167 119 181 113 199 C108 216 103 232 98 251 C92 229 87 212 80 197 C73 181 65 166 54 151 Z" />
+    <path d="M160 86 L232 120 C214 138 201 160 192 188 C183 214 176 240 168 262 C159 238 152 214 142 188 C132 161 119 139 98 120 Z" />
+    <path d="M228 136 L266 151 C255 166 247 181 240 197 C233 212 228 229 222 251 C217 232 212 216 207 199 C201 181 194 167 185 154 Z" />
+  </g>
+  <circle cx="103" cy="123" r="14" fill="#1aa7e2" />
+  <circle cx="162" cy="90" r="16" fill="#f51e2f" />
+  <circle cx="233" cy="122" r="14" fill="#ff9518" />
+</svg>
