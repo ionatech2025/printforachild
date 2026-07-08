@@ -9,7 +9,7 @@ import { Footer } from '@/components/footer'
 import { MobileDonateCTA } from '@/components/mobile-donate-cta'
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
 import { StatCounter } from '@/components/stat-counter'
-import { impactStats, galleryImages } from '@/lib/data'
+import { impactStats, projects } from '@/lib/data'
 
 export const metadata: Metadata = {
   title: 'Our Work',
@@ -311,7 +311,7 @@ export default function OurWorkPage() {
             </AnimateOnScroll>
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-              {galleryImages.slice(0, 8).map((image, index) => (
+              {projects.flatMap(p => p.images).slice(0, 8).map((image, index) => (
                 <AnimateOnScroll key={index} delay={index * 50}>
                   <div className="relative aspect-square rounded-xl overflow-hidden group">
                     <Image

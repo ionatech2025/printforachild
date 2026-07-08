@@ -182,7 +182,7 @@ export const projects = [
 export const blogPosts = [
   {
     slug: 'uplift-a-deaf-child-outreach',
-    title: '‘UPLIFT A DEAF CHILD OUTREACH’: Outreach at Sign Message School for the Deaf',
+    title: 'Uplift a Deaf Child Outreach',
     date: '2026-06-12',
     summary: 'Our team conducted a meaningful outreach program at Sign Message School for the Deaf in Wakiso District, delivering essential materials and supplies to support the students\' learning journey.',
     image: '/media/deaf_project/2.jpg',

@@ -40,10 +40,14 @@ export default function BlogPage() {
           <div className="container mx-auto px-4">
             {/* Blog Posts */}
             {blogPosts.length > 0 && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="flex flex-wrap justify-center gap-8">
                 {blogPosts.map((post, index) => (
-                  <AnimateOnScroll key={post.slug} delay={index * 100}>
-                    <Link href={`/blog/${post.slug}`} className="group">
+                  <AnimateOnScroll 
+                    key={post.slug} 
+                    delay={index * 100} 
+                    className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-lg"
+                  >
+                    <Link href={`/blog/${post.slug}`} className="group block h-full">
                       <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div className="relative aspect-[16/10] overflow-hidden">
                           <Image

@@ -36,10 +36,10 @@ import { ShareButtons } from '@/components/share-buttons'
 // STEP 1: UPDATE THIS METADATA
 // ============================================
 export const metadata: Metadata = {
-  title: '‘UPLIFT A DEAF CHILD OUTREACH’',
+  title: 'Uplift a Deaf Child Outreach',
   description: 'Print for A Child Foundation Outreach at Sign Message School for the Deaf at Kakiri, Wakiso District.',
   openGraph: {
-    title: '‘UPLIFT A DEAF CHILD OUTREACH’ | Print for a Child Foundation',
+    title: 'Uplift a Deaf Child Outreach | Print for a Child Foundation',
     description: 'Print for A Child Foundation Outreach at Sign Message School for the Deaf at Kakiri, Wakiso District.',
     images: ['/media/deaf_project/2.jpg'],
   },
@@ -50,7 +50,7 @@ export default function BlogPostPage() {
   // STEP 2: UPDATE THIS POST OBJECT
   // ============================================
   const post = {
-    title: '‘UPLIFT A DEAF CHILD OUTREACH’: Print for A Child Foundation Outreach at Sign Message School for the Deaf',
+    title: 'Uplift a Deaf Child Outreach',
     date: '2026-06-12',
     author: 'Print for a Child Foundation Team',
     image: '/media/deaf_project/2.jpg',
@@ -71,11 +71,11 @@ export default function BlogPostPage() {
                     Back to Blog
                   </Link>
                 </Button>
-                
+
                 <h1 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-foreground text-balance">
                   {post.title}
                 </h1>
-                
+
                 <div className="flex flex-wrap items-center gap-4 text-muted-foreground mb-8">
                   <span className="flex items-center gap-2">
                     <Calendar className="w-4 h-4" />
@@ -120,61 +120,61 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
+              <article className="max-w-3xl mx-auto font-sans">
                 {/* Lead paragraph - appears larger */}
-                <p className="lead text-xl text-muted-foreground">
+                <p className="text-xl text-muted-foreground font-medium mb-8 leading-relaxed">
                   At Print for A Child Foundation, we firmly believe that every child deserves access to quality education, learning resources, and opportunities to thrive regardless of their circumstances. It is this belief that continues to drive our mission of reaching underserved and vulnerable learners across Uganda.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   On the 12th June 2026, our team had the privilege of conducting a meaningful outreach program at Sign Message School for the Deaf in Wakiso District tilted ‘Uplift a Deaf Child’ Outreach. The visit was not only an opportunity to provide much-needed educational support but also a chance to connect with an inspiring community of learners whose determination and resilience continue to remind us of the power of education.
                 </p>
 
-                <h2>Background of Sign Message School for the Deaf</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">Background of Sign Message School for the Deaf</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   Sign Message school for the deaf was established in 2014 by a couple of individuals to take care and educate children with hearing impairment in Uganda, due to limited space they moved the school to the village of Buwanula Luyinja, Kakiri Town Council in Wakiso District. During this time they have educated hundreds of students and currently the school takes care of over 25 deaf children and also has over 9 admisitrators. Among the children includes the orphans, differently abled students among others.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   The biggest challenges facing the school includes lack of food supplies for the students, bedding items since it’s a boarding school, lack of scholastic materials, no classroom structures, lack of clean water and latrines among others.
                 </p>
 
-                <h2>Delivering Joy and Support</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">Delivering Joy and Support</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   The outreach was filled with excitement, joy, and hope as our team delivered a wide range of essential materials and supplies to support the students&apos; learning journey. Among the items donated were scholastic materials, storybooks, revision kits, exercise books, rulers, pens, pencils, sports balls, refreshments, and many other educational resources. These items were carefully selected to enhance both academic learning and extracurricular engagement among the students.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   For many children, access to basic learning materials is often taken for granted. However, for learners in special-needs institutions and underserved communities, these resources can make a significant difference in their educational experience. The donated storybooks will help nurture a culture of reading, creativity, and imagination, while the revision kits and scholastic materials will support classroom learning and academic excellence. The sports balls and recreational materials will encourage physical activity, teamwork, and social interaction, which are equally important aspects of a child&apos;s development.
                 </p>
 
-                <h2>A Touching Experience</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">A Touching Experience</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   One of the most touching moments of the day was witnessing the excitement on the faces of the little ones as they received the donated items. Their smiles, enthusiasm, and expressions of gratitude spoke louder than words. Despite the communication barriers that often exist between the hearing and deaf communities, the language of kindness, compassion, and inclusion was clearly understood by everyone present.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   The outreach also provided an opportunity for our team to interact with the school&apos;s administration, teachers, and support staff. We gained a deeper appreciation of the incredible work they do every day to ensure that children with hearing impairments receive quality education and the support they need to succeed. Their dedication serves as a powerful reminder that inclusive education is essential in building a society where every child has the opportunity to realize their full potential.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   As an organization committed to promoting equitable access to education, Print for A Child Foundation recognizes that many schools serving vulnerable and special-needs learners continue to face challenges related to limited resources and funding. Through initiatives such as this outreach, we aim to bridge some of these gaps and contribute to creating a more supportive learning environment for every child.
                 </p>
 
-                <h2>Gratitude and Looking Forward</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">Gratitude and Looking Forward</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   We extend our sincere gratitude to all our supporters, partners, volunteers, and well-wishers whose generosity made this outreach possible. Your contributions continue to transform lives and create opportunities for children who need them most. Every donated book, pen, ruler, and learning resource represents more than just a material item—it represents hope, opportunity, and a brighter future.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   As we reflect on this successful outreach, we remain inspired by the courage, determination, and dreams of the students at Sign Message School for the Deaf. Their potential is limitless, and we are honored to play a small role in supporting their educational journey.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   Print for A Child Foundation remains committed to reaching more schools, empowering more learners, and ensuring that no child is left behind. Together, we can continue building a future where every child has access to the tools, resources, and opportunities they need to succeed.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   With the help of our volunteers Mr. Ssenabulya Herbert, Ms Elizabeth Nafula and Mr. Paul Bukulu we managed to carryout this activity and they later received Certificates of Appreciation from our Team Leader Mr. Paul Lwanawetaase and our Projects Coordinator Ms Rinah Marion Namwase.
                 </p>
               </article>
