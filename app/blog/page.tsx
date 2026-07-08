@@ -38,55 +38,16 @@ export default function BlogPage() {
         {/* Blog Posts Grid */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            {/* Featured Post */}
+            {/* Blog Posts */}
             {blogPosts.length > 0 && (
-              <AnimateOnScroll>
-                <Link href={`/blog/${blogPosts[0].slug}`} className="block group mb-12">
-                  <Card className="border-0 shadow-lg overflow-hidden">
-                    <div className="grid md:grid-cols-2">
-                      <div className="relative aspect-[16/10] md:aspect-auto">
-                        <Image
-                          src={blogPosts[0].image}
-                          alt={blogPosts[0].title}
-                          fill
-                          className="object-cover transition-transform duration-300 group-hover:scale-105"
-                          priority
-                        />
-                      </div>
-                      <CardContent className="p-8 flex flex-col justify-center">
-                        <span className="inline-block px-3 py-1 bg-secondary/10 text-secondary text-sm font-medium rounded-full w-fit mb-4">
-                          Latest Post
-                        </span>
-                        <time className="text-sm text-muted-foreground">
-                          {new Date(blogPosts[0].date).toLocaleDateString('en-US', {
-                            year: 'numeric',
-                            month: 'long',
-                            day: 'numeric',
-                          })}
-                        </time>
-                        <h2 className="font-heading text-2xl md:text-3xl font-bold mt-2 mb-4 text-foreground group-hover:text-primary transition-colors">
-                          {blogPosts[0].title}
-                        </h2>
-                        <p className="text-muted-foreground mb-6 leading-relaxed">
-                          {blogPosts[0].summary}
-                        </p>
-                        <span className="inline-flex items-center gap-2 text-primary font-semibold group-hover:gap-3 transition-all">
-                          Read More
-                          <ArrowRight className="w-4 h-4" />
-                        </span>
-                      </CardContent>
-                    </div>
-                  </Card>
-                </Link>
-              </AnimateOnScroll>
-            )}
-
-            {/* Other Posts */}
-            {blogPosts.length > 1 && (
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {blogPosts.slice(1).map((post, index) => (
-                  <AnimateOnScroll key={post.slug} delay={index * 100}>
-                    <Link href={`/blog/${post.slug}`} className="group">
+              <div className="flex flex-wrap justify-center gap-8">
+                {blogPosts.map((post, index) => (
+                  <AnimateOnScroll 
+                    key={post.slug} 
+                    delay={index * 100} 
+                    className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-lg"
+                  >
+                    <Link href={`/blog/${post.slug}`} className="group block h-full">
                       <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                         <div className="relative aspect-[16/10] overflow-hidden">
                           <Image

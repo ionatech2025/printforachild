@@ -89,41 +89,41 @@ export default function BlogPostPage() {
         <section className="py-8">
           <div className="container mx-auto px-4">
             <AnimateOnScroll>
-              <article className="prose prose-lg prose-neutral max-w-3xl mx-auto font-sans prose-headings:font-heading prose-headings:font-bold prose-headings:text-foreground prose-p:font-sans prose-p:text-muted-foreground prose-li:font-sans prose-li:text-muted-foreground prose-a:text-primary prose-img:rounded-xl">
-                <p className="lead text-xl text-muted-foreground">
+              <article className="max-w-3xl mx-auto font-sans">
+                <p className="text-xl text-muted-foreground font-medium mb-8 leading-relaxed">
                   We are thrilled to share the success of our March 2026 Book Distribution Drive, where we successfully distributed 200 books in the Mukono district, reaching children with educational materials.
                 </p>
 
-                <h2>A Day of Joy and Learning</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">A Day of Joy and Learning</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   On March 15th, 2026, our team embarked on one of our most ambitious distribution drives to date. Starting early in the morning, we visited five primary schools in the Mukono district, bringing with us boxes filled with textbooks, storybooks, and learning materials.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   The excitement was palpable as children gathered in their school compounds, eagerly awaiting the arrival of their new books. For many of these students, this would be the first time they would have their own personal textbook to take home and study with.
                 </p>
 
-                <h2>The Impact</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">The Impact</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   Each child received a set of curriculum-aligned textbooks covering core subjects including English, Mathematics, Science, and Social Studies. Additionally, we distributed storybooks to encourage recreational reading and foster a love for literature.
                 </p>
 
-                <p>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   Teachers at the schools expressed their gratitude, noting how the lack of textbooks had been a significant barrier to effective teaching. &ldquo;Now we can assign homework and independent study. The children can review lessons at home with their families,&rdquo; shared one head teacher.
                 </p>
 
-                <h2>Community Support</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">Community Support</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   This distribution was made possible through the generous support of our donors and volunteers. We extend our heartfelt thanks to everyone who contributed to making this drive a success.
                 </p>
 
-                <h2>Looking Ahead</h2>
-                <p>
+                <h2 className="text-2xl md:text-3xl font-bold font-heading mt-12 mb-6 text-foreground">Looking Ahead</h2>
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
                   This is just the beginning. We are already planning our next distribution drive and are committed to reaching even more schools and children across Uganda. With your continued support, we can ensure that every child has access to quality educational materials.
                 </p>
 
-                <p>
-                  If you would like to support our next distribution drive or volunteer with us, please visit our <Link href="/get-involved">Get Involved</Link> page or <Link href="/donate#payment-methods">make a donation</Link> today.
+                <p className="mb-6 leading-relaxed text-muted-foreground text-lg">
+                  If you would like to support our next distribution drive or volunteer with us, please visit our <Link href="/get-involved" className="text-primary hover:underline font-medium">Get Involved</Link> page or <Link href="/donate#payment-methods" className="text-primary hover:underline font-medium">make a donation</Link> today.
                 </p>
               </article>
             </AnimateOnScroll>
