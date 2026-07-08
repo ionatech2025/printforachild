@@ -20,7 +20,7 @@ const programIcons = {
 export default function HomePage() {
   return (
     <>
-      <Header />
+      <Header theme="dark" />
       <main>
         {/* Hero Section */}
         <section className="relative min-h-screen flex items-center pt-20">
@@ -367,10 +367,14 @@ export default function HomePage() {
               </div>
             </AnimateOnScroll>
 
-            <div className={blogPosts.length === 1 ? "grid max-w-xl mx-auto gap-8" : "grid md:grid-cols-3 gap-8"}>
+            <div className="flex flex-wrap justify-center gap-8">
               {blogPosts.slice(0, 3).map((post, index) => (
-                <AnimateOnScroll key={post.slug} delay={index * 100}>
-                  <Link href={`/blog/${post.slug}`} className="group">
+                <AnimateOnScroll 
+                  key={post.slug} 
+                  delay={index * 100}
+                  className="w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)] max-w-lg"
+                >
+                  <Link href={`/blog/${post.slug}`} className="group block h-full">
                     <Card className="h-full border-0 shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                       <div className="relative aspect-[16/10] overflow-hidden">
                         <Image

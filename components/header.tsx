@@ -8,7 +8,11 @@ import { SiteLogo } from '@/components/site-logo'
 import { navLinks, siteIdentity } from '@/lib/data'
 import { cn } from '@/lib/utils'
 
-export function Header() {
+interface HeaderProps {
+  theme?: "light" | "dark"
+}
+
+export function Header({ theme = "light" }: HeaderProps = {}) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
 
@@ -36,7 +40,7 @@ export function Header() {
             <SiteLogo className="size-11 sm:size-[60px]" />
             <span className={cn(
               "hidden md:block max-w-[13rem] font-heading text-sm leading-tight font-bold transition-colors lg:text-base",
-              isScrolled ? "text-foreground" : "text-foreground"
+              isScrolled ? "text-foreground" : (theme === 'dark' ? "text-white" : "text-foreground")
             )}>
               {siteIdentity.name}
             </span>
@@ -49,8 +53,10 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary",
-                  isScrolled ? "text-foreground" : "text-foreground"
+                  "text-sm font-medium transition-colors",
+                  isScrolled 
+                    ? "text-foreground hover:text-primary" 
+                    : (theme === 'dark' ? "text-white/90 hover:text-white" : "text-foreground hover:text-primary")
                 )}
               >
                 {link.label}
@@ -70,7 +76,12 @@ export function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="lg:hidden p-2 rounded-lg hover:bg-muted transition-colors"
+            className={cn(
+              "lg:hidden p-2 rounded-lg transition-colors",
+              isScrolled 
+                ? "hover:bg-muted text-foreground" 
+                : (theme === 'dark' ? "text-white hover:bg-white/20" : "hover:bg-muted text-foreground")
+            )}
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
           >

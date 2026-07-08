@@ -79,12 +79,12 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${poppins.variable}`}>
       <head>
         {/* Google Analytics placeholder */}
         {/* <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script> */}
       </head>
-      <body className="font-sans antialiased">
+      <body suppressHydrationWarning className="font-sans antialiased">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>

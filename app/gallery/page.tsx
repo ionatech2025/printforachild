@@ -7,7 +7,8 @@ import { Footer } from '@/components/footer'
 import { MobileDonateCTA } from '@/components/mobile-donate-cta'
 import { AnimateOnScroll } from '@/components/animate-on-scroll'
 import { LightboxGallery } from '@/components/lightbox-gallery'
-import { galleryImages } from '@/lib/data'
+import { projects } from '@/lib/data'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 
 export const metadata: Metadata = {
   title: 'Photo Gallery',
@@ -38,9 +39,50 @@ export default function GalleryPage() {
         {/* Gallery Section */}
         <section className="py-16">
           <div className="container mx-auto px-4">
-            <AnimateOnScroll>
-              <LightboxGallery images={galleryImages} columns={3} />
-            </AnimateOnScroll>
+            <Tabs defaultValue="recent" className="w-full">
+              <div className="flex justify-center mb-8">
+                <TabsList className="bg-muted">
+                  <TabsTrigger value="recent">Recent Project</TabsTrigger>
+                  <TabsTrigger value="past">Past Projects</TabsTrigger>
+                </TabsList>
+              </div>
+
+              <TabsContent value="recent" className="mt-0">
+                {projects.filter(p => p.category === 'Recent').map(project => (
+                  <div key={project.id} className="mb-12">
+                    <AnimateOnScroll>
+                      <div className="text-center mb-8">
+                        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                          {project.title}
+                        </h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
+                          {project.description}
+                        </p>
+                      </div>
+                      <LightboxGallery images={project.images} columns={3} />
+                    </AnimateOnScroll>
+                  </div>
+                ))}
+              </TabsContent>
+
+              <TabsContent value="past" className="mt-0">
+                {projects.filter(p => p.category === 'Past').map(project => (
+                  <div key={project.id} className="mb-12">
+                    <AnimateOnScroll>
+                      <div className="text-center mb-8">
+                        <h2 className="font-heading text-2xl md:text-3xl font-bold mb-4 text-foreground">
+                          {project.title}
+                        </h2>
+                        <p className="text-muted-foreground max-w-2xl mx-auto">
+                          {project.description}
+                        </p>
+                      </div>
+                      <LightboxGallery images={project.images} columns={3} />
+                    </AnimateOnScroll>
+                  </div>
+                ))}
+              </TabsContent>
+            </Tabs>
           </div>
         </section>
 

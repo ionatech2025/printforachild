@@ -105,52 +105,89 @@ export const testimonials = [
   },
 ]
 
-// Gallery images
-export const galleryImages = [
+// Projects and Gallery
+export const projects = [
   {
-    src: '/media/client-april-2026/classroom-hero.webp',
-    alt: 'Students smiling and learning together in a classroom',
-    caption: 'A lively classroom where curiosity and confidence grow together',
+    id: 'sign-message-school',
+    title: 'Sign Message School for the Deaf Outreach',
+    category: 'Recent',
+    description: 'We delivered essential scholastic materials, storybooks, and sports equipment to over 25 deaf children at Sign Message School in Kakiri, Wakiso District.',
+    images: [
+      { src: '/media/deaf_project/1.jpg', alt: 'Outreach at Sign Message School', caption: 'Delivering essential materials' },
+      { src: '/media/deaf_project/2.jpg', alt: 'Outreach at Sign Message School', caption: 'Supporting deaf children' },
+      { src: '/media/deaf_project/3.jpg', alt: 'Outreach at Sign Message School', caption: 'Educational support' },
+      { src: '/media/deaf_project/4.jpg', alt: 'Outreach at Sign Message School', caption: 'Smiles of joy' },
+      { src: '/media/deaf_project/5.jpg', alt: 'Outreach at Sign Message School', caption: 'Community of learners' },
+      { src: '/media/deaf_project/8.jpg', alt: 'Outreach at Sign Message School', caption: 'Providing learning resources' },
+      { src: '/media/deaf_project/9.jpg', alt: 'Outreach at Sign Message School', caption: 'Interacting with students' },
+      { src: '/media/deaf_project/10.jpg', alt: 'Outreach at Sign Message School', caption: 'Empowering through education' },
+      { src: '/media/deaf_project/11.jpg', alt: 'Outreach at Sign Message School', caption: 'A brighter future' },
+      { src: '/media/deaf_project/12.jpg', alt: 'Outreach at Sign Message School', caption: 'Building hope' },
+      { src: '/media/deaf_project/13.jpg', alt: 'Outreach at Sign Message School', caption: 'Teamwork and dedication' },
+      { src: '/media/deaf_project/cert.jpg', alt: 'Certificate of Appreciation', caption: 'Recognition for volunteers' },
+      { src: '/media/deaf_project/cert2.jpg', alt: 'Certificate of Appreciation', caption: 'Appreciation from the school' },
+    ]
   },
   {
-    src: '/media/client-april-2026/book-handout.jpg',
-    alt: 'A volunteer handing books to young children outdoors',
-    caption: 'Receiving new books is often the first step toward staying in school',
-  },
-  {
-    src: '/media/client-april-2026/library-study.jpg',
-    alt: 'Learners gathered around textbooks in a library setting',
-    caption: 'Shared reading spaces give children room to learn side by side',
-  },
-  {
-    src: '/media/client-april-2026/notebook-smiles.jpg',
-    alt: 'Two students proudly holding their new exercise books',
-    caption: 'Each notebook we distribute represents a child ready to keep learning',
-  },
-  {
-    src: '/media/client-april-2026/blue-book-smile.jpg',
-    alt: 'A smiling girl holding a blue book in class',
-    caption: 'The confidence that comes from having a book of your own',
-  },
-  {
-    src: '/media/client-april-2026/classroom-portrait.jpg',
-    alt: 'A young learner reading attentively during class',
-    caption: 'Focused reading time helps children build lasting literacy skills',
-  },
-  {
-    src: '/media/client-april-2026/classroom-reading.png',
-    alt: 'Two children sharing a workbook while seated in class',
-    caption: 'Children learn faster when quality materials are within reach',
-  },
-  {
-    src: '/media/client-april-2026/celebration-books.gif',
-    alt: 'Students raising colorful storybooks during a reading celebration',
-    caption: 'Reading celebrations turn books into moments children remember',
-  },
+    id: 'past-projects',
+    title: 'General Past Projects',
+    category: 'Past',
+    description: 'A collection of photos from our various book distributions and school support programs across Uganda.',
+    images: [
+      {
+        src: '/media/client-april-2026/classroom-hero.webp',
+        alt: 'Students smiling and learning together in a classroom',
+        caption: 'A lively classroom where curiosity and confidence grow together',
+      },
+      {
+        src: '/media/client-april-2026/book-handout.jpg',
+        alt: 'A volunteer handing books to young children outdoors',
+        caption: 'Receiving new books is often the first step toward staying in school',
+      },
+      {
+        src: '/media/client-april-2026/library-study.jpg',
+        alt: 'Learners gathered around textbooks in a library setting',
+        caption: 'Shared reading spaces give children room to learn side by side',
+      },
+      {
+        src: '/media/client-april-2026/notebook-smiles.jpg',
+        alt: 'Two students proudly holding their new exercise books',
+        caption: 'Each notebook we distribute represents a child ready to keep learning',
+      },
+      {
+        src: '/media/client-april-2026/blue-book-smile.jpg',
+        alt: 'A smiling girl holding a blue book in class',
+        caption: 'The confidence that comes from having a book of your own',
+      },
+      {
+        src: '/media/client-april-2026/classroom-portrait.jpg',
+        alt: 'A young learner reading attentively during class',
+        caption: 'Focused reading time helps children build lasting literacy skills',
+      },
+      {
+        src: '/media/client-april-2026/classroom-reading.png',
+        alt: 'Two children sharing a workbook while seated in class',
+        caption: 'Children learn faster when quality materials are within reach',
+      },
+      {
+        src: '/media/client-april-2026/celebration-books.gif',
+        alt: 'Students raising colorful storybooks during a reading celebration',
+        caption: 'Reading celebrations turn books into moments children remember',
+      },
+    ]
+  }
 ]
 
 // Blog posts - Add new posts at the TOP of this array
 export const blogPosts = [
+  {
+    slug: 'uplift-a-deaf-child-outreach',
+    title: 'Uplift a Deaf Child Outreach',
+    date: '2026-06-12',
+    summary: 'Our team conducted a meaningful outreach program at Sign Message School for the Deaf in Wakiso District, delivering essential materials and supplies to support the students\' learning journey.',
+    image: '/media/deaf_project/2.jpg',
+    author: 'Print for a Child Foundation Team',
+  },
   {
     slug: 'march-2026-book-distribution',
     title: 'March 2026 Book Distribution Drive',
